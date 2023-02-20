@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>Typora配置阿里云OSS图床</title>
+    <link href="/2023/02/20/Typora%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91OSS%E5%9B%BE%E5%BA%8A/"/>
+    <url>/2023/02/20/Typora%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91OSS%E5%9B%BE%E5%BA%8A/</url>
+    
+    <content type="html"><![CDATA[<h3 id="1-安装Typora"><a href="#1-安装Typora" class="headerlink" title="1.安装Typora"></a>1.安装Typora</h3><p>请到<a href="https://typoraio.cn/">Typora官网</a>自行下载，然后傻瓜式安装就行。</p><h3 id="2-安装PicGo"><a href="#2-安装PicGo" class="headerlink" title="2.安装PicGo"></a>2.安装PicGo</h3><p>请到<a href="https://github.com/Molunerfinn/PicGo/releases">PicGo的github地址</a>，如果因为某些原因github速度很慢的话，也可以到<a href="https://mirrors.sdu.edu.cn/github-release/Molunerfinn_PicGo">山东大学的镜像站</a>选择自己喜欢的版本进行下载，然后傻瓜式安装就行，需要记下安装路径，后面需要用到。值得一提的是图床软件PicGo可以帮我们自动管理图片的上传，这样图片就可以不依赖于本地了，图片也就能被外网访问到了。</p><p>软件界面长这样</p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221001629395.png" alt="image-20230221001629395"></p><h3 id="3-配置阿里云的OSS服务，请先自己购买一个"><a href="#3-配置阿里云的OSS服务，请先自己购买一个" class="headerlink" title="3.配置阿里云的OSS服务，请先自己购买一个"></a>3.配置阿里云的OSS服务，请先自己购买一个</h3><h4 id="3-1创建bucket（或者使用你原有的bucket）这个请自行判断。新建bucket的话点击下图位置进行新建。"><a href="#3-1创建bucket（或者使用你原有的bucket）这个请自行判断。新建bucket的话点击下图位置进行新建。" class="headerlink" title="3.1创建bucket（或者使用你原有的bucket）这个请自行判断。新建bucket的话点击下图位置进行新建。"></a>3.1创建bucket（或者使用你原有的bucket）这个请自行判断。新建bucket的话点击下图位置进行新建。</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221000650138.png" alt="image-20230221000650138"></p><p>需要注意是”读写权限“选择”公共读“，不然无法访问你上传到OSS的图片。</p><h4 id="3-2在Bucket创建一个文件夹存放上传的图片（推荐但不是必需，自行判断）"><a href="#3-2在Bucket创建一个文件夹存放上传的图片（推荐但不是必需，自行判断）" class="headerlink" title="3.2在Bucket创建一个文件夹存放上传的图片（推荐但不是必需，自行判断）"></a>3.2在Bucket创建一个文件夹存放上传的图片（推荐但不是必需，自行判断）</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002451244.png" alt="image-20230221002451244"></p><h4 id="3-3记录Bucket的”地域节点“，后面PicGo配置OSS的时候会用到"><a href="#3-3记录Bucket的”地域节点“，后面PicGo配置OSS的时候会用到" class="headerlink" title="3.3记录Bucket的”地域节点“，后面PicGo配置OSS的时候会用到"></a>3.3记录Bucket的”地域节点“，后面PicGo配置OSS的时候会用到</h4><h5 id="3-3-1点击Bucket底下的”概览“按钮"><a href="#3-3-1点击Bucket底下的”概览“按钮" class="headerlink" title="3.3.1点击Bucket底下的”概览“按钮"></a>3.3.1点击Bucket底下的”概览“按钮</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221001805150.png" alt="image-20230221001805150"></p><h5 id="3-3-2记录”地域节点“"><a href="#3-3-2记录”地域节点“" class="headerlink" title="3.3.2记录”地域节点“"></a>3.3.2记录”地域节点“</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221001858895.png" alt="image-20230221001858895"></p><p>后面.aliyuncs.com是不需要的</p><h4 id="3-4创建OSS的ACCESS凭证"><a href="#3-4创建OSS的ACCESS凭证" class="headerlink" title="3.4创建OSS的ACCESS凭证"></a>3.4创建OSS的ACCESS凭证</h4><h5 id="3-4-1鼠标移动至阿里云头像处，然后点击AccessKey管理"><a href="#3-4-1鼠标移动至阿里云头像处，然后点击AccessKey管理" class="headerlink" title="3.4.1鼠标移动至阿里云头像处，然后点击AccessKey管理"></a>3.4.1鼠标移动至阿里云头像处，然后点击AccessKey管理</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002046802.png" alt="image-20230221002046802"></p><h5 id="3-4-2点击”继续使用AccessKey“"><a href="#3-4-2点击”继续使用AccessKey“" class="headerlink" title="3.4.2点击”继续使用AccessKey“"></a>3.4.2点击”继续使用AccessKey“</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002139574.png" alt="image-20230221002139574"></p><h5 id="3-3-3创建新的AccessKey，并且记录下来，后面会用到"><a href="#3-3-3创建新的AccessKey，并且记录下来，后面会用到" class="headerlink" title="3.3.3创建新的AccessKey，并且记录下来，后面会用到"></a>3.3.3创建新的AccessKey，并且记录下来，后面会用到</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002203999.png" alt="image-20230221002203999"></p><h3 id="4-PicGo配置OSS"><a href="#4-PicGo配置OSS" class="headerlink" title="4.PicGo配置OSS"></a>4.PicGo配置OSS</h3><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002723035.png" alt="image-20230221002723035"></p><h3 id="5-Typora配置PicGo"><a href="#5-Typora配置PicGo" class="headerlink" title="5.Typora配置PicGo"></a>5.Typora配置PicGo</h3><h4 id="5-1点击-文件》偏好设置"><a href="#5-1点击-文件》偏好设置" class="headerlink" title="5.1点击 文件》偏好设置"></a>5.1点击 文件》偏好设置</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002810710.png" alt="image-20230221002810710"></p><h5 id="5-2插入图片时选择”上传图片“，这样Typora插入的所有图片都会自动帮你上传到OSS了（选做，你也可以不设置这个，然后按照自己喜欢的方式选择）"><a href="#5-2插入图片时选择”上传图片“，这样Typora插入的所有图片都会自动帮你上传到OSS了（选做，你也可以不设置这个，然后按照自己喜欢的方式选择）" class="headerlink" title="5.2插入图片时选择”上传图片“，这样Typora插入的所有图片都会自动帮你上传到OSS了（选做，你也可以不设置这个，然后按照自己喜欢的方式选择）"></a>5.2插入图片时选择”上传图片“，这样Typora插入的所有图片都会自动帮你上传到OSS了（选做，你也可以不设置这个，然后按照自己喜欢的方式选择）</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002844959.png" alt="image-20230221002844959"></p><h4 id="5-3配置PicGo-exe，路径是安装PicGo的路径，找到底下的PicGo-exe复制过来即可"><a href="#5-3配置PicGo-exe，路径是安装PicGo的路径，找到底下的PicGo-exe复制过来即可" class="headerlink" title="5.3配置PicGo.exe，路径是安装PicGo的路径，找到底下的PicGo.exe复制过来即可"></a>5.3配置PicGo.exe，路径是安装PicGo的路径，找到底下的PicGo.exe复制过来即可</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002943777.png" alt="image-20230221002943777"></p><p>配置完成后可以点击”验证图片上传选项“进行验证一下。</p><h3 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>配置</category>
+      
+      <category>其它</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Typora</tag>
+      
+      <tag>OSS</tag>
+      
+      <tag>PicGo</tag>
+      
+      <tag>图床</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《请回答1988》推荐</title>
     <link href="/2023/02/19/%E3%80%8A%E8%AF%B7%E5%9B%9E%E7%AD%941988%E3%80%8B%E6%8E%A8%E8%8D%90/"/>
     <url>/2023/02/19/%E3%80%8A%E8%AF%B7%E5%9B%9E%E7%AD%941988%E3%80%8B%E6%8E%A8%E8%8D%90/</url>

@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Typora上传图片自动添加水印</title>
+    <link href="/2023/02/23/Typora%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/"/>
+    <url>/2023/02/23/Typora%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/</url>
+    
+    <content type="html"><![CDATA[<p>给图片添加水印可能有的人会觉得是多此一举，不仅没必要还影响到了图片的观看。但是我觉得21世纪的人还是要有一点原创精神在，至少在博客圈子里面不要直接就搬运人家的图片甚至直接copy博客。所以这里就介绍一下如何在Typora上面通过PicGo上传图片到图床的过程中自动给图片加上自定义水印。</p><h3 id="一、先配置好Typora自动通过PicGo上传图片"><a href="#一、先配置好Typora自动通过PicGo上传图片" class="headerlink" title="一、先配置好Typora自动通过PicGo上传图片"></a>一、先配置好Typora自动通过PicGo上传图片</h3><p>可以自行到这个<a href="https://huzihua.github.io/2023/02/20/Typora%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91OSS%E5%9B%BE%E5%BA%8A/">博文</a>里进行参考</p><h3 id="二、在PicGo安装WaterMark插件"><a href="#二、在PicGo安装WaterMark插件" class="headerlink" title="二、在PicGo安装WaterMark插件"></a>二、在PicGo安装WaterMark插件</h3><p>打开PicGo软件，打开“插件设置”</p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223214430.png" alt="image-20230223214430570"></p><p>然后直接搜索“watermark”然后进行安装即可，有时会出现安装失败的情况，这个时候多安装几次应该就可以。</p><p>安装完成后就进行水印的相关参数设置，如图所示，打开插件的设置面板</p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223214556.png" alt="image-20230223214555836"></p><p>安装提示进行填写即可。</p><ul><li>其中的“字体文件路径”和“水印图片路径”是选填。只有当你的水印文字是中文的时候你才需要设置字体文件路径，windows用户的文字路径统一在“C:\Windows\Fonts”底下，右键查看属性可以看到字体文件的名字（一般是.TTF结尾），复制你想要的字体文件的绝对路径即可。</li></ul><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223214737.png" alt="image-20230223214737128"></p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223215050.png" alt="image-20230223215050513"></p><ul><li><p>对于水印文字颜色不太懂怎么获取的，可以到<a href="https://c.runoob.com/front-end/6214/#2c5d5f">菜鸟工具的取色器</a>简单获取</p></li><li><p>水印位置可以自行选择：</p></li></ul><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs vim">默认是（rb）<br>rb 右下角<br><br><span class="hljs-keyword">lt</span>：左上<br><br>ct：中上<br><br>rt：右上<br><br><span class="hljs-keyword">lm</span>：左中<br><br><span class="hljs-keyword">cm</span>：正中间<br><br>rm：右中<br><br><span class="hljs-keyword">lb</span>：左下<br><br><span class="hljs-keyword">cb</span>：中下<br></code></pre></td></tr></table></figure><p>水印图片路径是针对你的水印是图片类型才需要设置，文字水印是可以忽略的，而且必须说明的是图片水印的优先级是高于文字水印的。</p><p>配置完成后点击确定即可。</p><h3 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>配置</category>
+      
+      <category>其它</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Typora</tag>
+      
+      <tag>PicGo</tag>
+      
+      <tag>水印</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>国内注册ChatGPT</title>
     <link href="/2023/02/21/%E5%9B%BD%E5%86%85%E6%B3%A8%E5%86%8CChatGPT/"/>
     <url>/2023/02/21/%E5%9B%BD%E5%86%85%E6%B3%A8%E5%86%8CChatGPT/</url>

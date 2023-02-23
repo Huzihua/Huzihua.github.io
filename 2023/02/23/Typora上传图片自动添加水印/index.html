@@ -16,21 +16,20 @@
   <meta name="author" content="Polaris">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.安装Typora请到Typora官网自行下载，然后傻瓜式安装就行。 2.安装PicGo请到PicGo的github地址，如果因为某些原因github速度很慢的话，也可以到山东大学的镜像站选择自己喜欢的版本进行下载，然后傻瓜式安装就行，需要记下安装路径，后面需要用到。值得一提的是图床软件PicGo可以帮我们自动管理图片的上传，这样图片就可以不依赖于本地了，图片也就能被外网访问到了。 软件界面长这">
+    <meta name="description" content="给图片添加水印可能有的人会觉得是多此一举，不仅没必要还影响到了图片的观看。但是我觉得21世纪的人还是要有一点原创精神在，至少在博客圈子里面不要直接就搬运人家的图片甚至直接copy博客。所以这里就介绍一下如何在Typora上面通过PicGo上传图片到图床的过程中自动给图片加上自定义水印。 一、先配置好Typora自动通过PicGo上传图片可以自行到这个博文里进行参考 二、在PicGo安装WaterM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Typora配置阿里云OSS图床">
-<meta property="og:url" content="https://huzihua.github.io/2023/02/20/Typora%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91OSS%E5%9B%BE%E5%BA%8A/index.html">
+<meta property="og:title" content="Typora上传图片自动添加水印">
+<meta property="og:url" content="https://huzihua.github.io/2023/02/23/Typora%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/index.html">
 <meta property="og:site_name" content="Polaris&#39;s Blog">
-<meta property="og:description" content="1.安装Typora请到Typora官网自行下载，然后傻瓜式安装就行。 2.安装PicGo请到PicGo的github地址，如果因为某些原因github速度很慢的话，也可以到山东大学的镜像站选择自己喜欢的版本进行下载，然后傻瓜式安装就行，需要记下安装路径，后面需要用到。值得一提的是图床软件PicGo可以帮我们自动管理图片的上传，这样图片就可以不依赖于本地了，图片也就能被外网访问到了。 软件界面长这">
+<meta property="og:description" content="给图片添加水印可能有的人会觉得是多此一举，不仅没必要还影响到了图片的观看。但是我觉得21世纪的人还是要有一点原创精神在，至少在博客圈子里面不要直接就搬运人家的图片甚至直接copy博客。所以这里就介绍一下如何在Typora上面通过PicGo上传图片到图床的过程中自动给图片加上自定义水印。 一、先配置好Typora自动通过PicGo上传图片可以自行到这个博文里进行参考 二、在PicGo安装WaterM">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/103476702-23d72680-4dc9-11eb-968b-d7da44fab91a.png">
-<meta property="article:published_time" content="2023-02-20T15:55:43.000Z">
-<meta property="article:modified_time" content="2023-02-21T16:51:44.181Z">
+<meta property="article:published_time" content="2023-02-23T13:14:22.000Z">
+<meta property="article:modified_time" content="2023-02-23T14:04:45.997Z">
 <meta property="article:author" content="Polaris">
 <meta property="article:tag" content="Typora">
-<meta property="article:tag" content="OSS">
 <meta property="article:tag" content="PicGo">
-<meta property="article:tag" content="图床">
+<meta property="article:tag" content="水印">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/103476702-23d72680-4dc9-11eb-968b-d7da44fab91a.png">
   
@@ -38,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Typora配置阿里云OSS图床 - Polaris&#39;s Blog</title>
+  <title>Typora上传图片自动添加水印 - Polaris&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Typora配置阿里云OSS图床"></span>
+            <span id="subtitle" data-typed-text="Typora上传图片自动添加水印"></span>
           
         </div>
 
@@ -220,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-20 23:55" pubdate>
-          2023年2月20日 晚上
+        <time datetime="2023-02-23 21:14" pubdate>
+          2023年2月23日 晚上
         </time>
       </span>
     
@@ -232,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          792 字
+          655 字
         
       </span>
     
@@ -243,7 +242,7 @@
         
         
         
-          7 分钟
+          6 分钟
         
       </span>
     
@@ -289,12 +288,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Typora配置阿里云OSS图床</h1>
+            <h1 style="display: none">Typora上传图片自动添加水印</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2 天前
+                    本文最后更新于：几秒前
                   
                 
               </p>
@@ -302,25 +301,29 @@
             
               <div class="markdown-body">
                 
-                <h3 id="1-安装Typora"><a href="#1-安装Typora" class="headerlink" title="1.安装Typora"></a>1.安装Typora</h3><p>请到<a target="_blank" rel="noopener" href="https://typoraio.cn/">Typora官网</a>自行下载，然后傻瓜式安装就行。</p>
-<h3 id="2-安装PicGo"><a href="#2-安装PicGo" class="headerlink" title="2.安装PicGo"></a>2.安装PicGo</h3><p>请到<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">PicGo的github地址</a>，如果因为某些原因github速度很慢的话，也可以到<a target="_blank" rel="noopener" href="https://mirrors.sdu.edu.cn/github-release/Molunerfinn_PicGo">山东大学的镜像站</a>选择自己喜欢的版本进行下载，然后傻瓜式安装就行，需要记下安装路径，后面需要用到。值得一提的是图床软件PicGo可以帮我们自动管理图片的上传，这样图片就可以不依赖于本地了，图片也就能被外网访问到了。</p>
-<p>软件界面长这样</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221001629395.png" srcset="/img/loading.gif" lazyload alt="image-20230221001629395" title="PicGo图片"></p>
-<h3 id="3-配置阿里云的OSS服务，请先自己购买一个"><a href="#3-配置阿里云的OSS服务，请先自己购买一个" class="headerlink" title="3.配置阿里云的OSS服务，请先自己购买一个"></a>3.配置阿里云的OSS服务，请先自己购买一个</h3><h4 id="3-1创建bucket（或者使用你原有的bucket）这个请自行判断。新建bucket的话点击下图位置进行新建。"><a href="#3-1创建bucket（或者使用你原有的bucket）这个请自行判断。新建bucket的话点击下图位置进行新建。" class="headerlink" title="3.1创建bucket（或者使用你原有的bucket）这个请自行判断。新建bucket的话点击下图位置进行新建。"></a>3.1创建bucket（或者使用你原有的bucket）这个请自行判断。新建bucket的话点击下图位置进行新建。</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221000650138.png" srcset="/img/loading.gif" lazyload alt="image-20230221000650138" title="创建Bucket"></p>
-<p>需要注意是”读写权限“选择”公共读“，不然无法访问你上传到OSS的图片。</p>
-<h4 id="3-2在Bucket创建一个文件夹存放上传的图片（推荐但不是必需，自行判断）"><a href="#3-2在Bucket创建一个文件夹存放上传的图片（推荐但不是必需，自行判断）" class="headerlink" title="3.2在Bucket创建一个文件夹存放上传的图片（推荐但不是必需，自行判断）"></a>3.2在Bucket创建一个文件夹存放上传的图片（推荐但不是必需，自行判断）</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002451244.png" srcset="/img/loading.gif" lazyload alt="image-20230221002451244" title="Bucket新建目录"></p>
-<h4 id="3-3记录Bucket的”地域节点“，后面PicGo配置OSS的时候会用到"><a href="#3-3记录Bucket的”地域节点“，后面PicGo配置OSS的时候会用到" class="headerlink" title="3.3记录Bucket的”地域节点“，后面PicGo配置OSS的时候会用到"></a>3.3记录Bucket的”地域节点“，后面PicGo配置OSS的时候会用到</h4><h5 id="3-3-1点击Bucket底下的”概览“按钮"><a href="#3-3-1点击Bucket底下的”概览“按钮" class="headerlink" title="3.3.1点击Bucket底下的”概览“按钮"></a>3.3.1点击Bucket底下的”概览“按钮</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221001805150.png" srcset="/img/loading.gif" lazyload alt="image-20230221001805150" title="Bucket概览"></p>
-<h5 id="3-3-2记录”地域节点“"><a href="#3-3-2记录”地域节点“" class="headerlink" title="3.3.2记录”地域节点“"></a>3.3.2记录”地域节点“</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221001858895.png" srcset="/img/loading.gif" lazyload alt="image-20230221001858895" title="Bucket地域节点"></p>
-<p>后面.aliyuncs.com是不需要的</p>
-<h4 id="3-4创建OSS的ACCESS凭证"><a href="#3-4创建OSS的ACCESS凭证" class="headerlink" title="3.4创建OSS的ACCESS凭证"></a>3.4创建OSS的ACCESS凭证</h4><h5 id="3-4-1鼠标移动至阿里云头像处，然后点击AccessKey管理"><a href="#3-4-1鼠标移动至阿里云头像处，然后点击AccessKey管理" class="headerlink" title="3.4.1鼠标移动至阿里云头像处，然后点击AccessKey管理"></a>3.4.1鼠标移动至阿里云头像处，然后点击AccessKey管理</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002046802.png" srcset="/img/loading.gif" lazyload alt="image-20230221002046802" title="AccessKey管理"></p>
-<h5 id="3-4-2点击”继续使用AccessKey“"><a href="#3-4-2点击”继续使用AccessKey“" class="headerlink" title="3.4.2点击”继续使用AccessKey“"></a>3.4.2点击”继续使用AccessKey“</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002139574.png" srcset="/img/loading.gif" lazyload alt="image-20230221002139574" title="继续使用AccessKey"></p>
-<h5 id="3-3-3创建新的AccessKey，并且记录下来，后面会用到"><a href="#3-3-3创建新的AccessKey，并且记录下来，后面会用到" class="headerlink" title="3.3.3创建新的AccessKey，并且记录下来，后面会用到"></a>3.3.3创建新的AccessKey，并且记录下来，后面会用到</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002203999.png" srcset="/img/loading.gif" lazyload alt="image-20230221002203999" title="创建AccessKey"></p>
-<h3 id="4-PicGo配置OSS"><a href="#4-PicGo配置OSS" class="headerlink" title="4.PicGo配置OSS"></a>4.PicGo配置OSS</h3><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002723035.png" srcset="/img/loading.gif" lazyload alt="image-20230221002723035" title="PicGo配置OSS"></p>
-<p>这里的“设定存储路径”需要和上面Bucket新建的文件夹一致才能保证上传的图片至你想要的Bucket的文件夹。</p>
-<h3 id="5-Typora配置PicGo"><a href="#5-Typora配置PicGo" class="headerlink" title="5.Typora配置PicGo"></a>5.Typora配置PicGo</h3><h4 id="5-1点击-文件》偏好设置"><a href="#5-1点击-文件》偏好设置" class="headerlink" title="5.1点击 文件》偏好设置"></a>5.1点击 文件》偏好设置</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002810710.png" srcset="/img/loading.gif" lazyload alt="image-20230221002810710" title="偏好设置"></p>
-<h5 id="5-2插入图片时选择”上传图片“，这样Typora插入的所有图片都会自动帮你上传到OSS了（选做，你也可以不设置这个，然后按照自己喜欢的方式选择）"><a href="#5-2插入图片时选择”上传图片“，这样Typora插入的所有图片都会自动帮你上传到OSS了（选做，你也可以不设置这个，然后按照自己喜欢的方式选择）" class="headerlink" title="5.2插入图片时选择”上传图片“，这样Typora插入的所有图片都会自动帮你上传到OSS了（选做，你也可以不设置这个，然后按照自己喜欢的方式选择）"></a>5.2插入图片时选择”上传图片“，这样Typora插入的所有图片都会自动帮你上传到OSS了（选做，你也可以不设置这个，然后按照自己喜欢的方式选择）</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002844959.png" srcset="/img/loading.gif" lazyload alt="image-20230221002844959" title="自动上传图片"></p>
-<h4 id="5-3配置PicGo-exe，路径是安装PicGo的路径，找到底下的PicGo-exe复制过来即可"><a href="#5-3配置PicGo-exe，路径是安装PicGo的路径，找到底下的PicGo-exe复制过来即可" class="headerlink" title="5.3配置PicGo.exe，路径是安装PicGo的路径，找到底下的PicGo.exe复制过来即可"></a>5.3配置PicGo.exe，路径是安装PicGo的路径，找到底下的PicGo.exe复制过来即可</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogimage-20230221002943777.png" srcset="/img/loading.gif" lazyload alt="image-20230221002943777" title="选择PicGo上传图片"></p>
-<p>配置完成后可以点击”验证图片上传选项“进行验证一下。</p>
+                <p>给图片添加水印可能有的人会觉得是多此一举，不仅没必要还影响到了图片的观看。但是我觉得21世纪的人还是要有一点原创精神在，至少在博客圈子里面不要直接就搬运人家的图片甚至直接copy博客。所以这里就介绍一下如何在Typora上面通过PicGo上传图片到图床的过程中自动给图片加上自定义水印。</p>
+<h3 id="一、先配置好Typora自动通过PicGo上传图片"><a href="#一、先配置好Typora自动通过PicGo上传图片" class="headerlink" title="一、先配置好Typora自动通过PicGo上传图片"></a>一、先配置好Typora自动通过PicGo上传图片</h3><p>可以自行到这个<a href="https://huzihua.github.io/2023/02/20/Typora%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91OSS%E5%9B%BE%E5%BA%8A/">博文</a>里进行参考</p>
+<h3 id="二、在PicGo安装WaterMark插件"><a href="#二、在PicGo安装WaterMark插件" class="headerlink" title="二、在PicGo安装WaterMark插件"></a>二、在PicGo安装WaterMark插件</h3><p>打开PicGo软件，打开“插件设置”</p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223214430.png" srcset="/img/loading.gif" lazyload alt="image-20230223214430570"></p>
+<p>然后直接搜索“watermark”然后进行安装即可，有时会出现安装失败的情况，这个时候多安装几次应该就可以。</p>
+<p>安装完成后就进行水印的相关参数设置，如图所示，打开插件的设置面板</p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223214556.png" srcset="/img/loading.gif" lazyload alt="image-20230223214555836"></p>
+<p>安装提示进行填写即可。</p>
+<ul>
+<li>其中的“字体文件路径”和“水印图片路径”是选填。只有当你的水印文字是中文的时候你才需要设置字体文件路径，windows用户的文字路径统一在“C:\Windows\Fonts”底下，右键查看属性可以看到字体文件的名字（一般是.TTF结尾），复制你想要的字体文件的绝对路径即可。</li>
+</ul>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223214737.png" srcset="/img/loading.gif" lazyload alt="image-20230223214737128"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223215050.png" srcset="/img/loading.gif" lazyload alt="image-20230223215050513"></p>
+<ul>
+<li><p>对于水印文字颜色不太懂怎么获取的，可以到<a target="_blank" rel="noopener" href="https://c.runoob.com/front-end/6214/#2c5d5f">菜鸟工具的取色器</a>简单获取</p>
+</li>
+<li><p>水印位置可以自行选择：</p>
+</li>
+</ul>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs vim">默认是（rb）<br>rb 右下角<br><br><span class="hljs-keyword">lt</span>：左上<br><br>ct：中上<br><br>rt：右上<br><br><span class="hljs-keyword">lm</span>：左中<br><br><span class="hljs-keyword">cm</span>：正中间<br><br>rm：右中<br><br><span class="hljs-keyword">lb</span>：左下<br><br><span class="hljs-keyword">cb</span>：中下<br></code></pre></td></tr></table></figure>
+
+<p>水印图片路径是针对你的水印是图片类型才需要设置，文字水印是可以忽略的，而且必须说明的是图片水印的优先级是高于文字水印的。</p>
+<p>配置完成后点击确定即可。</p>
 <h3 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h3>
                 
               </div>
@@ -363,11 +366,9 @@
       
         <a href="/tags/Typora/">#Typora</a>
       
-        <a href="/tags/OSS/">#OSS</a>
-      
         <a href="/tags/PicGo/">#PicGo</a>
       
-        <a href="/tags/%E5%9B%BE%E5%BA%8A/">#图床</a>
+        <a href="/tags/%E6%B0%B4%E5%8D%B0/">#水印</a>
       
     </div>
   
@@ -379,8 +380,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Typora配置阿里云OSS图床</div>
-      <div>https://huzihua.github.io/2023/02/20/Typora配置阿里云OSS图床/</div>
+      <div>Typora上传图片自动添加水印</div>
+      <div>https://huzihua.github.io/2023/02/23/Typora上传图片自动添加水印/</div>
     </div>
     <div class="license-meta">
       
@@ -392,7 +393,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月20日</div>
+          <div>2023年2月23日</div>
         </div>
       
       
@@ -424,18 +425,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/21/%E5%9B%BD%E5%86%85%E6%B3%A8%E5%86%8CChatGPT/" title="国内注册ChatGPT">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">国内注册ChatGPT</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/19/%E3%80%8A%E8%AF%B7%E5%9B%9E%E7%AD%941988%E3%80%8B%E6%8E%A8%E8%8D%90/" title="《请回答1988》推荐">
-                        <span class="hidden-mobile">《请回答1988》推荐</span>
+                      <a href="/2023/02/21/%E5%9B%BD%E5%86%85%E6%B3%A8%E5%86%8CChatGPT/" title="国内注册ChatGPT">
+                        <span class="hidden-mobile">国内注册ChatGPT</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -458,7 +453,7 @@
         var options = Object.assign(
           {"clientID":"d3d78ed95becc914d37b","clientSecret":"30043bd3f5576e66ee2c0176fe3d0a6ae9569f85","repo":"MyBlogComment","owner":"Huzihua","admin":["Huzihua"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'a85905c0074ca315b224f48197c6939c'
+            id: '6309ba4979e68fe736fe80d15be67249'
           }
         )
         var gitalk = new Gitalk(options);

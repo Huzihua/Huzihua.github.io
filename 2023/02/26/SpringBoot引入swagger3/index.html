@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
-  <link rel="icon" href="/img/avatar.jpg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/avatar.jpg">
+  <link rel="icon" href="/blog/img/avatar.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="SpringBoot引入Swagger3一、引入依赖 引入swagger 3.012345&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;springfox-boot-starter&lt;&#x2F;artifactId&gt;    &lt;version&gt;3.0.0&amp;lt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot引入Swagger3">
-<meta property="og:url" content="https://polaris1202.github.io/2023/02/26/SpringBoot%E5%BC%95%E5%85%A5swagger3/index.html">
+<meta property="og:url" content="https://huzihua.github.io/blog/2023/02/26/SpringBoot%E5%BC%95%E5%85%A5swagger3/index.html">
 <meta property="og:site_name" content="Polaris&#39;s Blog">
 <meta property="og:description" content="SpringBoot引入Swagger3一、引入依赖 引入swagger 3.012345&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;springfox-boot-starter&lt;&#x2F;artifactId&gt;    &lt;version&gt;3.0.0&amp;lt">
 <meta property="og:locale" content="zh_CN">
@@ -61,12 +61,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/blog/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
   
 
 
@@ -75,15 +75,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"polaris1202.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"huzihua.github.io","root":"/blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
   
 
 
@@ -100,7 +100,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/blog/">
       <strong>Polaris&#39;s Blog</strong>
     </a>
 
@@ -119,7 +119,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/blog/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -131,7 +131,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/blog/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -143,7 +143,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/blog/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -155,7 +155,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/blog/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -167,7 +167,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/blog/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -197,7 +197,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.png') no-repeat center center; background-size: cover;">
+     style="background: url('/blog/img/banner.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -315,15 +315,15 @@
 <li><h4 id="可能的错误"><a href="#可能的错误" class="headerlink" title="可能的错误"></a>可能的错误</h4></li>
 </ul>
 <p>然后启动的时候，你有可能会遇到<strong>错误</strong>：</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226214238.png" srcset="/img/loading.gif" lazyload alt="image-20230226214238182" title="错误"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226214238.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226214238182" title="错误"></p>
 <p>这是因为swagger3要依赖<strong>spring-plugin-core</strong> 中的 <strong>getPluginFor</strong> 方法，也就是图中框出来的那个方法，这个方法在<strong>spring-plugin-core</strong>的包里面，但是Swagger3对于<strong>spring-plugin-core</strong>的版本依赖最低是2.0.0，而你项目所依赖的<strong>spring-plugin-core</strong>的版本低于2.0.0。</p>
 <p>这是我的pom文件，可以看到<strong>SpringBoot</strong>的版本是<strong>2.1.18.RELEASE</strong></p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/image-20230226215905738.png" srcset="/img/loading.gif" lazyload alt="image-20230226215905738" title="SpringbBoot版本"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/image-20230226215905738.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226215905738" title="SpringbBoot版本"></p>
 <p>它里面依赖的<strong>spring-plugin-core</strong>版本是<strong>1.2.0.RELEASE</strong>，是低于<strong>2.0.0</strong>版本的</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226220028.png" srcset="/img/loading.gif" lazyload alt="image-20230226220028728" title="spring-plugin-core"></p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226220102.png" srcset="/img/loading.gif" lazyload alt="image-20230226220102874" title="spring-plugin-core版本"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226220028.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226220028728" title="spring-plugin-core"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226220102.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226220102874" title="spring-plugin-core版本"></p>
 <p>直接在idea右边maven管理也能看到项目依赖的<strong>spring-plugin-core</strong>版本是<strong>1.2.0.RELEASE</strong>：</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226221830.png" srcset="/img/loading.gif" lazyload alt="image-20230226221830691" title="依赖信息"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226221830.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226221830691" title="依赖信息"></p>
 <p>解决办法:</p>
 <p>在pom文件的手动指定<strong>spring-plugin</strong>的版本为<strong>2.0.0.RELEASE</strong>：</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata">&lt;spring-<span class="hljs-keyword">plugin</span>.<span class="hljs-keyword">version</span>&gt;2.0.0.RELEASE&lt;/spring-<span class="hljs-keyword">plugin</span>.<span class="hljs-keyword">version</span>&gt;<br></code></pre></td></tr></table></figure>
@@ -331,7 +331,7 @@
 <p>然后重新更新maven依赖重启即可</p>
 <p>在浏览器输入<a target="_blank" rel="noopener" href="http://localhost:8080/demo/doc.html">http://localhost:8080/demo/doc.html</a></p>
 <p><strong>”端口“</strong>以及<strong>”server.servlet.context-path“</strong>根据自己程序设置的自行替换。</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226223728.png" srcset="/img/loading.gif" lazyload alt="image-20230226223728388" title="swagger首页"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226223728.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226223728388" title="swagger首页"></p>
 <h3 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h3>
                 
               </div>
@@ -350,12 +350,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  <a href="/blog/categories/Java/" class="category-chain-item">Java</a>
   
   
     <span>></span>
     
-  <a href="/categories/Java/SpringBoot/" class="category-chain-item">SpringBoot</a>
+  <a href="/blog/categories/Java/SpringBoot/" class="category-chain-item">SpringBoot</a>
   
   
 
@@ -372,11 +372,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/SpringBoot/">#SpringBoot</a>
+        <a href="/blog/tags/SpringBoot/">#SpringBoot</a>
       
-        <a href="/tags/Java/">#Java</a>
+        <a href="/blog/tags/Java/">#Java</a>
       
-        <a href="/tags/Swagger/">#Swagger</a>
+        <a href="/blog/tags/Swagger/">#Swagger</a>
       
     </div>
   
@@ -389,7 +389,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>SpringBoot引入Swagger3</div>
-      <div>https://polaris1202.github.io/2023/02/26/SpringBoot引入swagger3/</div>
+      <div>https://huzihua.github.io/blog/2023/02/26/SpringBoot引入swagger3/</div>
     </div>
     <div class="license-meta">
       
@@ -437,7 +437,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/26/SpribgBoot%E5%BC%95%E5%85%A5Mybatis/" title="SpribgBoot引入Mybatis">
+                      <a href="/blog/2023/02/26/SpribgBoot%E5%BC%95%E5%85%A5Mybatis/" title="SpribgBoot引入Mybatis">
                         <span class="hidden-mobile">SpribgBoot引入Mybatis</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -456,7 +456,7 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createCssLink('/blog/css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
           {"clientID":"d3d78ed95becc914d37b","clientSecret":"30043bd3f5576e66ee2c0176fe3d0a6ae9569f85","repo":"MyBlogComment","owner":"Huzihua","admin":["Huzihua"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
@@ -618,8 +618,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -641,7 +641,7 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/blog/js/img-lazyload.js" ></script>
   
 
 
@@ -740,7 +740,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/blog/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -750,7 +750,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/blog/js/boot.js" ></script>
 
 
   

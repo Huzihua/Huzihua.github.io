@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
-  <link rel="icon" href="/img/avatar.jpg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/avatar.jpg">
+  <link rel="icon" href="/blog/img/avatar.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="SpribgBoot引入Mybatis这里介绍的是在SpringBoot项目中如何最基础的引入Mybatis框架，什么连接池如果你还没有新建SpringBoot项目的话，可以参照新建maven管理的多模块SpringBoot项目这里来创建一个新的SpringBoot项目。 一、引入相关依赖 pom文件引入tkMybatis依赖，它是Mybatis的拓展，它的配置方式和Mybatsi是完全一致的。它">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpribgBoot引入Mybatis">
-<meta property="og:url" content="https://polaris1202.github.io/2023/02/26/SpribgBoot%E5%BC%95%E5%85%A5Mybatis/index.html">
+<meta property="og:url" content="https://huzihua.github.io/blog/2023/02/26/SpribgBoot%E5%BC%95%E5%85%A5Mybatis/index.html">
 <meta property="og:site_name" content="Polaris&#39;s Blog">
 <meta property="og:description" content="SpribgBoot引入Mybatis这里介绍的是在SpringBoot项目中如何最基础的引入Mybatis框架，什么连接池如果你还没有新建SpringBoot项目的话，可以参照新建maven管理的多模块SpringBoot项目这里来创建一个新的SpringBoot项目。 一、引入相关依赖 pom文件引入tkMybatis依赖，它是Mybatis的拓展，它的配置方式和Mybatsi是完全一致的。它">
 <meta property="og:locale" content="zh_CN">
@@ -62,12 +62,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/blog/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
   
 
 
@@ -76,15 +76,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"polaris1202.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"huzihua.github.io","root":"/blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
   
 
 
@@ -101,7 +101,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/blog/">
       <strong>Polaris&#39;s Blog</strong>
     </a>
 
@@ -120,7 +120,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/blog/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -132,7 +132,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/blog/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -144,7 +144,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/blog/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -156,7 +156,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/blog/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -168,7 +168,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/blog/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -198,7 +198,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.png') no-repeat center center; background-size: cover;">
+     style="background: url('/blog/img/banner.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -302,7 +302,7 @@
             
               <div class="markdown-body">
                 
-                <h2 id="SpribgBoot引入Mybatis"><a href="#SpribgBoot引入Mybatis" class="headerlink" title="SpribgBoot引入Mybatis"></a>SpribgBoot引入Mybatis</h2><p>这里介绍的是在SpringBoot项目中如何最基础的引入Mybatis框架，什么连接池如果你还没有新建SpringBoot项目的话，可以参照<a target="_blank" rel="noopener" href="https://huzihua.github.io/2023/02/25/%E6%96%B0%E5%BB%BAmaven%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%9A%E6%A8%A1%E5%9D%97SpringBoot%E9%A1%B9%E7%9B%AE/">新建maven管理的多模块SpringBoot项目</a>这里来创建一个新的SpringBoot项目。</p>
+                <h2 id="SpribgBoot引入Mybatis"><a href="#SpribgBoot引入Mybatis" class="headerlink" title="SpribgBoot引入Mybatis"></a>SpribgBoot引入Mybatis</h2><p>这里介绍的是在SpringBoot项目中如何最基础的引入Mybatis框架，什么连接池如果你还没有新建SpringBoot项目的话，可以参照<a href="https://huzihua.github.io/2023/02/25/%E6%96%B0%E5%BB%BAmaven%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%9A%E6%A8%A1%E5%9D%97SpringBoot%E9%A1%B9%E7%9B%AE/">新建maven管理的多模块SpringBoot项目</a>这里来创建一个新的SpringBoot项目。</p>
 <h3 id="一、引入相关依赖"><a href="#一、引入相关依赖" class="headerlink" title="一、引入相关依赖"></a>一、引入相关依赖</h3><ul>
 <li><p>pom文件引入<strong>tkMybatis</strong>依赖，它是Mybatis的拓展，它的配置方式和Mybatsi是完全一致的。它帮我们实现了很多常用的sql语句，使用它可以有效节省我们的sql开发时间。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>tk.mybatis<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mapper-spring-boot-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.5<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
@@ -317,15 +317,15 @@
 <li><p>Mybatis配置</p>
 <ul>
 <li><p>启动类配置<strong>Mapper接口</strong>路径</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226164732.png" srcset="/img/loading.gif" lazyload alt="image-20230226164732333" title="启动类配置Mapper路径"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226164732.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226164732333" title="启动类配置Mapper路径"></p>
 </li>
 <li><p>配置文件配置sql的xml文件的路径，这里配置的是resouces文件夹底下的mapper路径</p>
 </li>
 </ul>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">mybatis.mapper-locations</span>=classpath:mapper/*.xml<br></code></pre></td></tr></table></figure></li>
 </ul>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226164919.png" srcset="/img/loading.gif" lazyload alt="image-20230226164919829" title="resources底下mapper路径"></p>
-<h3 id="三、书写简单代码"><a href="#三、书写简单代码" class="headerlink" title="三、书写简单代码"></a>三、书写简单代码</h3><h4 id="3-1-使用Mybatis插件生成实体、mapper接口、sql-xml代码"><a href="#3-1-使用Mybatis插件生成实体、mapper接口、sql-xml代码" class="headerlink" title="3.1 使用Mybatis插件生成实体、mapper接口、sql xml代码"></a>3.1 使用Mybatis插件生成实体、mapper接口、sql xml代码</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226165522.png" srcset="/img/loading.gif" lazyload alt="image-20230226165522963" title="Mybais插件生成"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226164919.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226164919829" title="resources底下mapper路径"></p>
+<h3 id="三、书写简单代码"><a href="#三、书写简单代码" class="headerlink" title="三、书写简单代码"></a>三、书写简单代码</h3><h4 id="3-1-使用Mybatis插件生成实体、mapper接口、sql-xml代码"><a href="#3-1-使用Mybatis插件生成实体、mapper接口、sql-xml代码" class="headerlink" title="3.1 使用Mybatis插件生成实体、mapper接口、sql xml代码"></a>3.1 使用Mybatis插件生成实体、mapper接口、sql xml代码</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226165522.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226165522963" title="Mybais插件生成"></p>
 <h4 id="3-2-编写测试代码"><a href="#3-2-编写测试代码" class="headerlink" title="3.2 编写测试代码"></a>3.2 编写测试代码</h4><p>自己新建一个接口以及接口的实现类再简单写一个插入接口即可。</p>
 <ul>
 <li><h5 id="接口方法"><a href="#接口方法" class="headerlink" title="接口方法"></a>接口方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 插入</span><br><span class="hljs-comment">* <span class="hljs-doctag">@param</span> sysUser 新数据</span><br><span class="hljs-comment">* <span class="hljs-doctag">@author</span> Polaris</span><br><span class="hljs-comment">* <span class="hljs-doctag">@return</span> int</span><br><span class="hljs-comment">* <span class="hljs-doctag">@date</span> 2023/2/26 16:56</span><br><span class="hljs-comment">*/</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">insert</span><span class="hljs-params">(SysUser sysUser)</span>;<br></code></pre></td></tr></table></figure></li>
@@ -343,9 +343,9 @@
 <h3 id="四、测试"><a href="#四、测试" class="headerlink" title="四、测试"></a>四、测试</h3><ul>
 <li><h5 id="postman发送请求"><a href="#postman发送请求" class="headerlink" title="postman发送请求"></a>postman发送请求</h5></li>
 </ul>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226172200.png" srcset="/img/loading.gif" lazyload alt="image-20230226172200541" title="postman测试"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226172200.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226172200541" title="postman测试"></p>
 <ul>
-<li><h5 id="数据库查看"><a href="#数据库查看" class="headerlink" title="数据库查看"></a>数据库查看</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/image-20230226172245820.png" srcset="/img/loading.gif" lazyload alt="image-20230226172245820" title="数据库查看数据"></p>
+<li><h5 id="数据库查看"><a href="#数据库查看" class="headerlink" title="数据库查看"></a>数据库查看</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/image-20230226172245820.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226172245820" title="数据库查看数据"></p>
 </li>
 </ul>
 <h3 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h3>
@@ -366,12 +366,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  <a href="/blog/categories/Java/" class="category-chain-item">Java</a>
   
   
     <span>></span>
     
-  <a href="/categories/Java/SpringBoot/" class="category-chain-item">SpringBoot</a>
+  <a href="/blog/categories/Java/SpringBoot/" class="category-chain-item">SpringBoot</a>
   
   
 
@@ -388,13 +388,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/SpringBoot/">#SpringBoot</a>
+        <a href="/blog/tags/SpringBoot/">#SpringBoot</a>
       
-        <a href="/tags/Mybatis/">#Mybatis</a>
+        <a href="/blog/tags/Mybatis/">#Mybatis</a>
       
-        <a href="/tags/Mysql/">#Mysql</a>
+        <a href="/blog/tags/Mysql/">#Mysql</a>
       
-        <a href="/tags/Java/">#Java</a>
+        <a href="/blog/tags/Java/">#Java</a>
       
     </div>
   
@@ -407,7 +407,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>SpribgBoot引入Mybatis</div>
-      <div>https://polaris1202.github.io/2023/02/26/SpribgBoot引入Mybatis/</div>
+      <div>https://huzihua.github.io/blog/2023/02/26/SpribgBoot引入Mybatis/</div>
     </div>
     <div class="license-meta">
       
@@ -451,7 +451,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/26/SpringBoot%E5%BC%95%E5%85%A5swagger3/" title="SpringBoot引入Swagger3">
+                      <a href="/blog/2023/02/26/SpringBoot%E5%BC%95%E5%85%A5swagger3/" title="SpringBoot引入Swagger3">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">SpringBoot引入Swagger3</span>
                         <span class="visible-mobile">上一篇</span>
@@ -461,7 +461,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/25/%E6%96%B0%E5%BB%BAmaven%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%9A%E6%A8%A1%E5%9D%97SpringBoot%E9%A1%B9%E7%9B%AE/" title="新建maven管理的多模块SpringBoot项目">
+                      <a href="/blog/2023/02/25/%E6%96%B0%E5%BB%BAmaven%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%9A%E6%A8%A1%E5%9D%97SpringBoot%E9%A1%B9%E7%9B%AE/" title="新建maven管理的多模块SpringBoot项目">
                         <span class="hidden-mobile">新建maven管理的多模块SpringBoot项目</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -480,7 +480,7 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createCssLink('/blog/css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
           {"clientID":"d3d78ed95becc914d37b","clientSecret":"30043bd3f5576e66ee2c0176fe3d0a6ae9569f85","repo":"MyBlogComment","owner":"Huzihua","admin":["Huzihua"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
@@ -642,8 +642,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -665,7 +665,7 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/blog/js/img-lazyload.js" ></script>
   
 
 
@@ -764,7 +764,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/blog/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -774,7 +774,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/blog/js/boot.js" ></script>
 
 
   

@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
-  <link rel="icon" href="/img/avatar.jpg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/avatar.jpg">
+  <link rel="icon" href="/blog/img/avatar.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="新建maven管理的多模块SpringBoot项目写在前面：这里介绍的是以一个最简单的Maven开始，SpribgBoot再在后面引入，虽然Idea已经提供了直接引入SpringBoot的maven项目，但是我觉得对于初学者来说，了解一下怎么从零开始引入Springboot也是有必要的。 一、本机环境介绍： Java 1.8.0_351 Maven 3.8.6 Intellij Idea 2023">
 <meta property="og:type" content="article">
 <meta property="og:title" content="新建maven管理的多模块SpringBoot项目">
-<meta property="og:url" content="https://polaris1202.github.io/2023/02/25/%E6%96%B0%E5%BB%BAmaven%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%9A%E6%A8%A1%E5%9D%97SpringBoot%E9%A1%B9%E7%9B%AE/index.html">
+<meta property="og:url" content="https://huzihua.github.io/blog/2023/02/25/%E6%96%B0%E5%BB%BAmaven%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%9A%E6%A8%A1%E5%9D%97SpringBoot%E9%A1%B9%E7%9B%AE/index.html">
 <meta property="og:site_name" content="Polaris&#39;s Blog">
 <meta property="og:description" content="新建maven管理的多模块SpringBoot项目写在前面：这里介绍的是以一个最简单的Maven开始，SpribgBoot再在后面引入，虽然Idea已经提供了直接引入SpringBoot的maven项目，但是我觉得对于初学者来说，了解一下怎么从零开始引入Springboot也是有必要的。 一、本机环境介绍： Java 1.8.0_351 Maven 3.8.6 Intellij Idea 2023">
 <meta property="og:locale" content="zh_CN">
@@ -63,12 +63,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/blog/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
   
 
 
@@ -77,15 +77,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"polaris1202.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"huzihua.github.io","root":"/blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
   
 
 
@@ -102,7 +102,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/blog/">
       <strong>Polaris&#39;s Blog</strong>
     </a>
 
@@ -121,7 +121,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/blog/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -133,7 +133,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/blog/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -145,7 +145,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/blog/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -157,7 +157,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/blog/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -169,7 +169,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/blog/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -199,7 +199,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.png') no-repeat center center; background-size: cover;">
+     style="background: url('/blog/img/banner.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -310,47 +310,47 @@
 <li>Intellij Idea 2023.3.2</li>
 </ul>
 <h3 id="二、开始创建"><a href="#二、开始创建" class="headerlink" title="二、开始创建"></a>二、开始创建</h3><h4 id="2-1-新建项目"><a href="#2-1-新建项目" class="headerlink" title="2.1 新建项目"></a>2.1 新建项目</h4><h5 id="2-1-1-从Idea开始面板开始创建"><a href="#2-1-1-从Idea开始面板开始创建" class="headerlink" title="2.1.1 从Idea开始面板开始创建"></a>2.1.1 从Idea开始面板开始创建</h5><p>如图点击<strong>”New Project“</strong>开始新建一个新的项目</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225002854.png" srcset="/img/loading.gif" lazyload alt="image-20230225002854378" title="开始面板新建项目"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225002854.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225002854378" title="开始面板新建项目"></p>
 <h5 id="2-1-2-右上角开始新建"><a href="#2-1-2-右上角开始新建" class="headerlink" title="2.1.2 右上角开始新建"></a>2.1.2 右上角开始新建</h5><p>如果你进去是已经打开了你上一次的项目的话，可以点击右上角<strong>”File-&gt;New-&gt;Project“</strong>开始新建项目</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225003128.png" srcset="/img/loading.gif" lazyload alt="image-20230225003128714" title="右上角新建项目"></p>
-<h4 id="2-2-新建一个Maven项目"><a href="#2-2-新建一个Maven项目" class="headerlink" title="2.2 新建一个Maven项目"></a>2.2 新建一个<strong>Maven</strong>项目</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225003449.png" srcset="/img/loading.gif" lazyload alt="image-20230225003449216" title="新建Maven项目"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225003128.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225003128714" title="右上角新建项目"></p>
+<h4 id="2-2-新建一个Maven项目"><a href="#2-2-新建一个Maven项目" class="headerlink" title="2.2 新建一个Maven项目"></a>2.2 新建一个<strong>Maven</strong>项目</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225003449.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225003449216" title="新建Maven项目"></p>
 <ul>
 <li><strong>”Name“</strong>是你新建项目的名字，这个自己定义即可，并无限制。</li>
 <li><strong>”Location“</strong>是你新建项目的父目录，像我这样的话，就会在<strong>“D:\codes\java”</strong>底下新创建一个叫<strong>“demo”</strong>的<strong>Maven项目</strong>了</li>
 <li><strong>”GroupId“</strong>一般自己本地练习项目的话就用默认的即可，实际在公司的时候就填自己公司要求的即可</li>
 </ul>
 <p>然后点击<strong>“create”</strong>就可以创建一个全新的<strong>Maven项目</strong>啦。如图所示：</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225004040.png" srcset="/img/loading.gif" lazyload alt="image-20230225004040442" title="全新Maven项目"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225004040.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225004040442" title="全新Maven项目"></p>
 <p>可以点击运行这里的<strong>main函数</strong>来看看有没有问题，一般来说能正常打出<strong>“Hello world!”</strong>就是没什么问题的了。</p>
 <h4 id="2-3-清空刚刚新建的项目"><a href="#2-3-清空刚刚新建的项目" class="headerlink" title="2.3 清空刚刚新建的项目"></a>2.3 清空刚刚新建的项目</h4><p>没错，就是要把除了.idea和pom.xml之外的其它文件都删除，.idea不要删除是因为这个只是Intellij Idea打开项目所自动创建的文件，和项目本身并无关系。而pom文件一般来说是要作为多模块项目的父pom来使用的，保留它。删除后就会变成这个样子了：</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225004443.png" srcset="/img/loading.gif" lazyload alt="image-20230225004443509" title="空的项目"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225004443.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225004443509" title="空的项目"></p>
 <h4 id="2-4-新建子模块"><a href="#2-4-新建子模块" class="headerlink" title="2.4 新建子模块"></a>2.4 新建子模块</h4><p>本示例里面子模块分为<strong>“common”</strong>（通用模块），<strong>“service”</strong>（服务模块，一般是逻辑代码所在），<strong>“server”</strong>（一般是服务端代码所在，供外部调用），这个其实自己按照自己习惯来就行。</p>
-<h5 id="2-4-1-新建common模块"><a href="#2-4-1-新建common模块" class="headerlink" title="2.4.1 新建common模块"></a>2.4.1 新建common模块</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225004556.png" srcset="/img/loading.gif" lazyload alt="image-20230225004556821" title="新建模块"></p>
+<h5 id="2-4-1-新建common模块"><a href="#2-4-1-新建common模块" class="headerlink" title="2.4.1 新建common模块"></a>2.4.1 新建common模块</h5><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225004556.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225004556821" title="新建模块"></p>
 <p>先点击右上角的<strong>“File-&gt;New-&gt;Module”</strong>来到新建模块的界面</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225004826.png" srcset="/img/loading.gif" lazyload alt="image-20230225004825974" title="新模块参数"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225004826.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225004825974" title="新模块参数"></p>
 <ul>
 <li><strong>“Name”<strong>是子模块的名字，这里是新建</strong>“common模块”</strong>所以是填的<strong>“common”</strong>，当然这个名字是没有限制的，按你的开发习惯来即可。</li>
 <li><strong>“Parent”</strong>是该模块的父项目，在这里就是一开始我新建的<strong>“demo”</strong>项目了</li>
 <li><strong>“GroupId”</strong> 是和父项目保持一致的</li>
 </ul>
 <p>然后同样是点击<strong>“create”</strong>就可以创建<strong>common模块</strong>了。</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225005650.png" srcset="/img/loading.gif" lazyload alt="image-20230225005649981" title="测试新模块"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225005650.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225005649981" title="测试新模块"></p>
 <p>新创建的<strong>common模块</strong>其实和一个单独新建的<strong>maven项目</strong>的目录结构是一模一样的，它同样可以跑一下<strong>main方法</strong>来看看有没有什么问题。</p>
 <p>查看子模块的pom文件你会在里面看到本模块所依赖的父项目的信息，包裹在&lt;parent&gt;标签里面。</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225005915.png" srcset="/img/loading.gif" lazyload alt="image-20230225005914965" title="子模块pom"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225005915.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225005914965" title="子模块pom"></p>
 <p>同样地，你也可以查看父项目的pom文件，也可以在里面看到它所有子模块的信息，全部都会包裹在&lt;modules&gt;标签里面</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225010108.png" srcset="/img/loading.gif" lazyload alt="image-20230225010108811" title="父项目pom文件"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225010108.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225010108811" title="父项目pom文件"></p>
 <h4 id="2-4-2-新建service模块"><a href="#2-4-2-新建service模块" class="headerlink" title="2.4.2 新建service模块"></a>2.4.2 新建service模块</h4><p>重复2.4.1即可</p>
 <h4 id="2-4-3-新建server模块"><a href="#2-4-3-新建server模块" class="headerlink" title="2.4.3 新建server模块"></a>2.4.3 新建server模块</h4><p>重复2.4.1即可</p>
 <p>最后的项目结构如图所示：</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225010456.png" srcset="/img/loading.gif" lazyload alt="image-20230225010456445" title="多模块项目结构"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225010456.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225010456445" title="多模块项目结构"></p>
 <h4 id="2-4-4-进行精简以及模块依赖"><a href="#2-4-4-进行精简以及模块依赖" class="headerlink" title="2.4.4 进行精简以及模块依赖"></a>2.4.4 进行精简以及模块依赖</h4><p>新建的每一个模块都是完整的一个maven项目，也就是会有多个启动类，但是一般我们一个项目里面只会有一个启动类，所以我们只需要<strong>server模块</strong>的启动类即可，其他的可以删掉。然后，我们还可以给<strong>server模块</strong>的启动类改个名字，这样会更符合规范（启动类以<strong>“Application”</strong>结尾），也更清晰，如这里我改成了<strong>“DemoApplication”</strong>。而且这里推荐一点的是，每个子模块都再在<strong>“org.example”</strong>底下新建一个自己模块名字命名的文件夹，这样项目结构就会清晰很多。</p>
 <p>最后精简后的多模块项目的雏形就是这样的了。</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225011235.png" srcset="/img/loading.gif" lazyload alt="image-20230225011235301" title="精简后的项目结构"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225011235.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225011235301" title="精简后的项目结构"></p>
 <h3 id="三、简单填充各模块"><a href="#三、简单填充各模块" class="headerlink" title="三、简单填充各模块"></a>三、简单填充各模块</h3><p>三个模块是建好了，但是现在的模块里面都是空的，或许也会有人会疑惑为什么要分模块，意义在哪。别急，接下来我们就要往各个模块里面填充内容了。</p>
 <h4 id="3-1-common通用模块"><a href="#3-1-common通用模块" class="headerlink" title="3.1 common通用模块"></a>3.1 common通用模块</h4><p>一般来说，<strong>common模块</strong>里面主要存放的是整个项目的通用类型的代码。如一些很多地方都要用到的常量类、又如一些经常使用到的工具类方法。</p>
 <p>如图所示，举个例子，我在这个模块里面新建了一个常量类和两个工具类。</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226000214.png" srcset="/img/loading.gif" lazyload alt="image-20230226000214347" title="common模块"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226000214.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226000214347" title="common模块"></p>
 <h4 id="3-2-server服务端模块"><a href="#3-2-server服务端模块" class="headerlink" title="3.2 server服务端模块"></a>3.2 server服务端模块</h4><p>既然server模块是作为服务端模块，自然地springboot的启动类以及配置文件就应该放在这个模块底下。</p>
 <h5 id="3-2-1-引入Springboot和基本配置文件"><a href="#3-2-1-引入Springboot和基本配置文件" class="headerlink" title="3.2.1 引入Springboot和基本配置文件"></a>3.2.1 引入Springboot和基本配置文件</h5><p>首先在父pom模块引入springBoot-starter-parenter的父依赖，我这里使用的是2.1.18.RELEASE版本</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">parent</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.18.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">parent</span>&gt;</span><br></code></pre></td></tr></table></figure>
@@ -360,8 +360,8 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <h5 id="3-2-3-新建配置文件"><a href="#3-2-3-新建配置文件" class="headerlink" title="3.2.3 新建配置文件"></a>3.2.3 新建配置文件</h5><p>在server模块底下的src.main.resource底下右键，<strong>“File-&gt;Resource Bundle”</strong>，然后填入<strong>“application”</strong>点击“OK”即可创建一个新的空白的配置文件了。</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225174915.png" srcset="/img/loading.gif" lazyload alt="image-20230225174915858" title="新建配置文件"></p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225175135.png" srcset="/img/loading.gif" lazyload alt="image-20230225175135805" title="新建配置文件"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225174915.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225174915858" title="新建配置文件"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225175135.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225175135805" title="新建配置文件"></p>
 <p>然后先往里面填入一些基本SpringBoot的配置信息即可。</p>
 <ul>
 <li> “server.servlet.context-path”：指定的是对外接口的前缀</li>
@@ -370,7 +370,7 @@
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">server.servlet.context-path</span>=/demo<br><span class="hljs-attr">server.port</span>=<span class="hljs-number">8080</span><br></code></pre></td></tr></table></figure>
 
 <h5 id="3-2-4-修改启动类"><a href="#3-2-4-修改启动类" class="headerlink" title="3.2.4 修改启动类"></a>3.2.4 修改启动类</h5><p>看看你的启动类，你会发现这里还是打印“Hello World!”。并不是SpringBoot的启动方式。所以要修改以下，引入“@SpringBootApplication”注解在启动类，然后main方法修改如下，这样才是正确的启动SpringBoot程序的方式之一：</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225174420.png" srcset="/img/loading.gif" lazyload alt="image-20230225174419981" title="SpringBoot启动类"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230225174420.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230225174419981" title="SpringBoot启动类"></p>
 <p>然后启动SpringBoot即可看到SpringBoot正常启动的日志了。</p>
 <h4 id="3-3-service服务模块"><a href="#3-3-service服务模块" class="headerlink" title="3.3 service服务模块"></a>3.3 service服务模块</h4><p>作为服务模块，这里就简单写一个最简单的接口服务作为实例。</p>
 <h5 id="3-3-1-编写测试接口"><a href="#3-3-1-编写测试接口" class="headerlink" title="3.3.1 编写测试接口"></a>3.3.1 编写测试接口</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> org.example.service.intf;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 示例接口</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> 25677</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">StringTestService</span> &#123;<br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 判断字符串是否是空</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> str 目标字符串</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span> 结果</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-type">boolean</span> <span class="hljs-title function_">isEmpty</span><span class="hljs-params">(String str)</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -389,7 +389,7 @@
 <p>在启动类同级目录下新建一个controller文件夹，然后在文件夹里面自己新建一个测试用的controller类。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> org.example.server.controller;<br><br><span class="hljs-keyword">import</span> org.example.service.intf.StringTestService;<br><span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.*;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> 25677</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@version</span> 1.0</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@description</span>: TODO</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023/2/26 0:10</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@RestController</span><br><span class="hljs-meta">@RequestMapping(&quot;/test&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StringTestController</span> &#123;<br><br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> StringTestService stringTestService;<br><br>    <span class="hljs-meta">@RequestMapping(value = &quot;/isEmpty/&#123;str&#125;&quot;, method = RequestMethod.GET)</span><br>    <span class="hljs-keyword">public</span> Boolean <span class="hljs-title function_">isEmpty</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable(name = &quot;str&quot;)</span> String str)</span> &#123;<br>        <span class="hljs-keyword">return</span> stringTestService.isEmpty(str);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h4 id="4-3-Postman测试"><a href="#4-3-Postman测试" class="headerlink" title="4.3 Postman测试"></a>4.3 Postman测试</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226003748.png" srcset="/img/loading.gif" lazyload alt="image-20230226003748733" title="Postman测试"></p>
+<h4 id="4-3-Postman测试"><a href="#4-3-Postman测试" class="headerlink" title="4.3 Postman测试"></a>4.3 Postman测试</h4><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230226003748.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230226003748733" title="Postman测试"></p>
 <h3 id="五、大功告成"><a href="#五、大功告成" class="headerlink" title="五、大功告成"></a>五、大功告成</h3><p>至此一个最简陋的的基于Maven管理的多模块的SpringBoot项目就算搭建完成了。在这个过程中更多的其实是体会maven的管理，以及子模块之间的如何进行协作。</p>
 
                 
@@ -409,12 +409,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  <a href="/blog/categories/Java/" class="category-chain-item">Java</a>
   
   
     <span>></span>
     
-  <a href="/categories/Java/SpringBoot/" class="category-chain-item">SpringBoot</a>
+  <a href="/blog/categories/Java/SpringBoot/" class="category-chain-item">SpringBoot</a>
   
   
 
@@ -431,15 +431,15 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/SpringBoot/">#SpringBoot</a>
+        <a href="/blog/tags/SpringBoot/">#SpringBoot</a>
       
-        <a href="/tags/Java/">#Java</a>
+        <a href="/blog/tags/Java/">#Java</a>
       
-        <a href="/tags/Intellij-Idea/">#Intellij Idea</a>
+        <a href="/blog/tags/Intellij-Idea/">#Intellij Idea</a>
       
-        <a href="/tags/%E5%A4%9A%E6%A8%A1%E5%9D%97/">#多模块</a>
+        <a href="/blog/tags/%E5%A4%9A%E6%A8%A1%E5%9D%97/">#多模块</a>
       
-        <a href="/tags/Maven/">#Maven</a>
+        <a href="/blog/tags/Maven/">#Maven</a>
       
     </div>
   
@@ -452,7 +452,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>新建maven管理的多模块SpringBoot项目</div>
-      <div>https://polaris1202.github.io/2023/02/25/新建maven管理的多模块SpringBoot项目/</div>
+      <div>https://huzihua.github.io/blog/2023/02/25/新建maven管理的多模块SpringBoot项目/</div>
     </div>
     <div class="license-meta">
       
@@ -496,7 +496,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/26/SpribgBoot%E5%BC%95%E5%85%A5Mybatis/" title="SpribgBoot引入Mybatis">
+                      <a href="/blog/2023/02/26/SpribgBoot%E5%BC%95%E5%85%A5Mybatis/" title="SpribgBoot引入Mybatis">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">SpribgBoot引入Mybatis</span>
                         <span class="visible-mobile">上一篇</span>
@@ -506,7 +506,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/23/Typora%E9%80%9A%E8%BF%87PicGo%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/" title="Typora通过PicGo上传图片自动添加水印">
+                      <a href="/blog/2023/02/23/Typora%E9%80%9A%E8%BF%87PicGo%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/" title="Typora通过PicGo上传图片自动添加水印">
                         <span class="hidden-mobile">Typora通过PicGo上传图片自动添加水印</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -525,7 +525,7 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createCssLink('/blog/css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
           {"clientID":"d3d78ed95becc914d37b","clientSecret":"30043bd3f5576e66ee2c0176fe3d0a6ae9569f85","repo":"MyBlogComment","owner":"Huzihua","admin":["Huzihua"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
@@ -687,8 +687,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -710,7 +710,7 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/blog/js/img-lazyload.js" ></script>
   
 
 
@@ -809,7 +809,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/blog/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -819,7 +819,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/blog/js/boot.js" ></script>
 
 
   

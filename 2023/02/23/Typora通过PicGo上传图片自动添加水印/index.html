@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
-  <link rel="icon" href="/img/avatar.jpg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/avatar.jpg">
+  <link rel="icon" href="/blog/img/avatar.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="Typora通过PicGo上传图片自动添加水印给图片添加水印可能有的人会觉得是多此一举，不仅没必要还影响到了图片的观看。但是我觉得21世纪的人还是要有一点原创精神在，至少在博客圈子里面不要直接就搬运人家的图片甚至直接copy博客。所以这里就介绍一下如何在Typora上面通过PicGo上传图片到图床的过程中自动给图片加上自定义水印。 一、先配置好Typora自动通过PicGo上传图片可以自行到这个博">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Typora通过PicGo上传图片自动添加水印">
-<meta property="og:url" content="https://polaris1202.github.io/2023/02/23/Typora%E9%80%9A%E8%BF%87PicGo%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/index.html">
+<meta property="og:url" content="https://huzihua.github.io/blog/2023/02/23/Typora%E9%80%9A%E8%BF%87PicGo%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/index.html">
 <meta property="og:site_name" content="Polaris&#39;s Blog">
 <meta property="og:description" content="Typora通过PicGo上传图片自动添加水印给图片添加水印可能有的人会觉得是多此一举，不仅没必要还影响到了图片的观看。但是我觉得21世纪的人还是要有一点原创精神在，至少在博客圈子里面不要直接就搬运人家的图片甚至直接copy博客。所以这里就介绍一下如何在Typora上面通过PicGo上传图片到图床的过程中自动给图片加上自定义水印。 一、先配置好Typora自动通过PicGo上传图片可以自行到这个博">
 <meta property="og:locale" content="zh_CN">
@@ -61,12 +61,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/blog/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
   
 
 
@@ -75,15 +75,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"polaris1202.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"huzihua.github.io","root":"/blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
   
 
 
@@ -100,7 +100,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/blog/">
       <strong>Polaris&#39;s Blog</strong>
     </a>
 
@@ -119,7 +119,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/blog/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -131,7 +131,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/blog/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -143,7 +143,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/blog/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -155,7 +155,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/blog/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -167,7 +167,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/blog/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -197,7 +197,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.png') no-repeat center center; background-size: cover;">
+     style="background: url('/blog/img/banner.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -302,18 +302,18 @@
               <div class="markdown-body">
                 
                 <h2 id="Typora通过PicGo上传图片自动添加水印"><a href="#Typora通过PicGo上传图片自动添加水印" class="headerlink" title="Typora通过PicGo上传图片自动添加水印"></a>Typora通过PicGo上传图片自动添加水印</h2><p>给图片添加水印可能有的人会觉得是多此一举，不仅没必要还影响到了图片的观看。但是我觉得21世纪的人还是要有一点原创精神在，至少在博客圈子里面不要直接就搬运人家的图片甚至直接copy博客。所以这里就介绍一下如何在Typora上面通过PicGo上传图片到图床的过程中自动给图片加上自定义水印。</p>
-<h3 id="一、先配置好Typora自动通过PicGo上传图片"><a href="#一、先配置好Typora自动通过PicGo上传图片" class="headerlink" title="一、先配置好Typora自动通过PicGo上传图片"></a>一、先配置好Typora自动通过PicGo上传图片</h3><p>可以自行到这个<a target="_blank" rel="noopener" href="https://huzihua.github.io/2023/02/20/Typora%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91OSS%E5%9B%BE%E5%BA%8A/">博文</a>里进行参考</p>
+<h3 id="一、先配置好Typora自动通过PicGo上传图片"><a href="#一、先配置好Typora自动通过PicGo上传图片" class="headerlink" title="一、先配置好Typora自动通过PicGo上传图片"></a>一、先配置好Typora自动通过PicGo上传图片</h3><p>可以自行到这个<a href="https://huzihua.github.io/2023/02/20/Typora%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91OSS%E5%9B%BE%E5%BA%8A/">博文</a>里进行参考</p>
 <h3 id="二、在PicGo安装WaterMark插件"><a href="#二、在PicGo安装WaterMark插件" class="headerlink" title="二、在PicGo安装WaterMark插件"></a>二、在PicGo安装WaterMark插件</h3><p>打开PicGo软件，打开“插件设置”</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223221141.png" srcset="/img/loading.gif" lazyload alt="image-20230223221141967" title="PicGo"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223221141.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230223221141967" title="PicGo"></p>
 <p>然后直接搜索“watermark”然后进行安装即可，有时会出现安装失败的情况，这个时候多安装几次应该就可以。</p>
 <p>安装完成后就进行水印的相关参数设置，如图所示，打开插件的设置面板</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223221155.png" srcset="/img/loading.gif" lazyload alt="image-20230223221154995" title="PicGo插件管理"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223221155.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230223221154995" title="PicGo插件管理"></p>
 <p>安装提示进行填写即可。</p>
 <ul>
 <li>其中的“字体文件路径”和“水印图片路径”是选填。只有当你的水印文字是中文的时候你才需要设置字体文件路径，windows用户的文字路径统一在“C:\Windows\Fonts”底下，右键查看属性可以看到字体文件的名字（一般是.TTF结尾），复制你想要的字体文件的绝对路径即可。</li>
 </ul>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223221250.png" srcset="/img/loading.gif" lazyload alt="image-20230223221250706" title="水印属性配置"></p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223221227.png" srcset="/img/loading.gif" lazyload alt="image-20230223221227160" title="字体选择"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223221250.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230223221250706" title="水印属性配置"></p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230223221227.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230223221227160" title="字体选择"></p>
 <ul>
 <li><p>对于水印文字颜色不太懂怎么获取的，可以到<a target="_blank" rel="noopener" href="https://c.runoob.com/front-end/6214/#2c5d5f">菜鸟工具的取色器</a>简单获取</p>
 </li>
@@ -347,12 +347,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%85%8D%E7%BD%AE/" class="category-chain-item">配置</a>
+  <a href="/blog/categories/%E9%85%8D%E7%BD%AE/" class="category-chain-item">配置</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E9%85%8D%E7%BD%AE/%E5%85%B6%E5%AE%83/" class="category-chain-item">其它</a>
+  <a href="/blog/categories/%E9%85%8D%E7%BD%AE/%E5%85%B6%E5%AE%83/" class="category-chain-item">其它</a>
   
   
 
@@ -369,11 +369,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Typora/">#Typora</a>
+        <a href="/blog/tags/Typora/">#Typora</a>
       
-        <a href="/tags/%E6%B0%B4%E5%8D%B0/">#水印</a>
+        <a href="/blog/tags/%E6%B0%B4%E5%8D%B0/">#水印</a>
       
-        <a href="/tags/PicGo/">#PicGo</a>
+        <a href="/blog/tags/PicGo/">#PicGo</a>
       
     </div>
   
@@ -386,7 +386,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Typora通过PicGo上传图片自动添加水印</div>
-      <div>https://polaris1202.github.io/2023/02/23/Typora通过PicGo上传图片自动添加水印/</div>
+      <div>https://huzihua.github.io/blog/2023/02/23/Typora通过PicGo上传图片自动添加水印/</div>
     </div>
     <div class="license-meta">
       
@@ -430,7 +430,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/25/%E6%96%B0%E5%BB%BAmaven%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%9A%E6%A8%A1%E5%9D%97SpringBoot%E9%A1%B9%E7%9B%AE/" title="新建maven管理的多模块SpringBoot项目">
+                      <a href="/blog/2023/02/25/%E6%96%B0%E5%BB%BAmaven%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%9A%E6%A8%A1%E5%9D%97SpringBoot%E9%A1%B9%E7%9B%AE/" title="新建maven管理的多模块SpringBoot项目">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">新建maven管理的多模块SpringBoot项目</span>
                         <span class="visible-mobile">上一篇</span>
@@ -440,7 +440,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/21/%E5%9B%BD%E5%86%85%E6%B3%A8%E5%86%8CChatGPT/" title="国内注册ChatGPT">
+                      <a href="/blog/2023/02/21/%E5%9B%BD%E5%86%85%E6%B3%A8%E5%86%8CChatGPT/" title="国内注册ChatGPT">
                         <span class="hidden-mobile">国内注册ChatGPT</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -459,7 +459,7 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createCssLink('/blog/css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
           {"clientID":"d3d78ed95becc914d37b","clientSecret":"30043bd3f5576e66ee2c0176fe3d0a6ae9569f85","repo":"MyBlogComment","owner":"Huzihua","admin":["Huzihua"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
@@ -621,8 +621,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -644,7 +644,7 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/blog/js/img-lazyload.js" ></script>
   
 
 
@@ -743,7 +743,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/blog/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -753,7 +753,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/blog/js/boot.js" ></script>
 
 
   

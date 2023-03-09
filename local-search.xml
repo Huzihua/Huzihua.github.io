@@ -4,6 +4,70 @@
   
   
   <entry>
+    <title>SpringBoot引入Redis</title>
+    <link href="/blog/2023/03/09/SpringBoot%E5%BC%95%E5%85%A5Redis/"/>
+    <url>/blog/2023/03/09/SpringBoot%E5%BC%95%E5%85%A5Redis/</url>
+    
+    <content type="html"><![CDATA[<h2 id="SpringBoot引入Redis"><a href="#SpringBoot引入Redis" class="headerlink" title="SpringBoot引入Redis"></a>SpringBoot引入Redis</h2><h3 id="1、引入依赖"><a href="#1、引入依赖" class="headerlink" title="1、引入依赖"></a>1、引入依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure><p>可选：连接池依赖</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.commons<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>commons-pool2<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure><p>想在<strong>SpringBoot</strong>引入<strong>Redis</strong>，其实就这一个<strong>spring-boot-starter-data-redis</strong>依赖就够了，它里面集成了我们所需要的几个依赖，直接一步到位。</p><p>点进去这个依赖的pom文件，你会看到它的所有依赖：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.18.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>compile<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><span class="hljs-comment">&lt;!--    redis依赖--&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.data<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-data-redis<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.21.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>compile<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">exclusions</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jcl-over-slf4j<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.slf4j<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">exclusions</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--    lettuce客户端依赖--&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.lettuce<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lettuce-core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.1.8.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>compile<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span><br></code></pre></td></tr></table></figure><p>SpringBoot的Redis默认使用的是lettuce客户端，就是在这里定义的。</p><h3 id="2、配置"><a href="#2、配置" class="headerlink" title="2、配置"></a>2、配置</h3><p>配置文件相关属性，这里如果你连接的redis是有设置密码的话也要加上<strong>spring.redis.password</strong>这个属性的，这里我连的是自己本机起的redis，而且并没有设置密码，所以这个属性可以不填。</p><p>连接池属性如果你并不需要使用连接池的话是不需要的，当然在实际开发中一般都是推荐使用<strong>连接池</strong>来<strong>减少连接损耗</strong>的。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs xml">spring.redis.host=127.0.0.1<br>spring.redis.port=6379<br>spring.redis.database=0<br>#连接池属性<br>spring.redis.lettuce.pool.max-active=16<br>spring.redis.lettuce.shutdown-timeout=10000<br>spring.redis.lettuce.pool.max-wait=2<br>spring.redis.lettuce.pool.min-idle=8<br></code></pre></td></tr></table></figure><h3 id="3、简单使用"><a href="#3、简单使用" class="headerlink" title="3、简单使用"></a>3、简单使用</h3><p>这里演示一下最简单的redis使用</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//使用spring-data-redis中为我们提供的StringRedisTemplate</span><br><span class="hljs-meta">@Autowired</span><br><span class="hljs-keyword">private</span> StringRedisTemplate stringRedisTemplate;<br><span class="hljs-comment">//set再取出</span><br>log.info(<span class="hljs-string">&quot;set之前,key=&#123;&#125;，value=&#123;&#125;&quot;</span>, key, stringRedisTemplate.opsForValue().get(key));<br>stringRedisTemplate.opsForValue().set(key, value, <span class="hljs-number">5</span>, TimeUnit.MINUTES);<br>log.info(<span class="hljs-string">&quot;set之后,key=&#123;&#125;，value=&#123;&#125;&quot;</span>, key, stringRedisTemplate.opsForValue().get(key));<br></code></pre></td></tr></table></figure><h3 id="4、验证"><a href="#4、验证" class="headerlink" title="4、验证"></a>4、验证</h3><p>可以看到，在没set之前取到的key是null，之后是能取出set进去的值，说明redis是正常使用的。</p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/image-20230309223639750.png" alt="image-20230309223639750" title="结果"></p><p>补充：</p><p>要想知道自己配置的redis连接池是否生效，可以通过打断点来查看你自动注入的<strong>RedisTemplate</strong>来查看，如下图：</p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230309224044.png" alt="image-20230309224044730" title="RedisTemplate属性"></p><p>正常使用了连接池的话，这里是能看到你在配置文件中配置的连接池的属性的。</p><h3 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>SpringBoot</category>
+      
+      <category>Redis</category>
+      
+      <category>Cache</category>
+      
+      <category>Redis</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>redis</tag>
+      
+      <tag>Cache</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SpringBoot+Kaptcha实现后端图形验证码</title>
+    <link href="/blog/2023/03/09/SpringBoot-Kaptcha%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
+    <url>/blog/2023/03/09/SpringBoot-Kaptcha%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<p>SpringBoot+Kaptcha实现后端图形验证码</p><h3 id="1、引入依赖"><a href="#1、引入依赖" class="headerlink" title="1、引入依赖"></a>1、引入依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.github.penggle<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>kaptcha<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.3.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure><h3 id="2、配置类"><a href="#2、配置类" class="headerlink" title="2、配置类"></a>2、配置类</h3><h3 id="3、简单实现"><a href="#3、简单实现" class="headerlink" title="3、简单实现"></a>3、简单实现</h3><h3 id="4、简单测试"><a href="#4、简单测试" class="headerlink" title="4、简单测试"></a>4、简单测试</h3><h3 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>SpringBoot</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>验证码</tag>
+      
+      <tag>Kaptcha</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>SpringBoot引入Swagger3</title>
     <link href="/blog/2023/02/26/SpringBoot%E5%BC%95%E5%85%A5swagger3/"/>
     <url>/blog/2023/02/26/SpringBoot%E5%BC%95%E5%85%A5swagger3/</url>
@@ -196,6 +260,41 @@
       <tag>OSS</tag>
       
       <tag>图床</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《请回答1988》推荐</title>
+    <link href="/blog/2023/02/19/%E3%80%8A%E8%AF%B7%E5%9B%9E%E7%AD%941988%E3%80%8B%E6%8E%A8%E8%8D%90/"/>
+    <url>/blog/2023/02/19/%E3%80%8A%E8%AF%B7%E5%9B%9E%E7%AD%941988%E3%80%8B%E6%8E%A8%E8%8D%90/</url>
+    
+    <content type="html"><![CDATA[<h2 id="《请回答1988》"><a href="#《请回答1988》" class="headerlink" title="《请回答1988》"></a>《请回答1988》</h2><h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>以下所有观点仅代表博主个人看法，不代表其它任何立场，如你发现有侵权行为，可及时与我联系进行删除。</p><p>这部电视剧我还没看完，先记录一下优缺点。</p><h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>​        “你看过《请回答1988》吗？没看过的话我强烈推荐你去看一下，我每次看都哭死！”，某天，我的一个老同学这样跟我推荐了一部韩剧，于是这段时间正剧荒的我就尝试着去看了这部剧，然后一发不可收拾。</p><p>​        其实对于这部电视剧我是早有耳闻的，豆瓣上高达9.7评分的它在很多年前其实就已经进入了我的待观影名单里面。一直没有真正去看这部好剧的原因很简单，我被我的偏见所影响了。在这里我先自我批评一下，一直以来我都对韩剧有着比较强烈的偏见——韩剧都是些俊男美女的爱情偶像剧或题材新颖的网飞剧。形成这个偏见的主要原因还是在于我对偶像剧有着莫名的排斥感，而早些年时候韩国的偶像剧曾经在国内风靡一时，所以在那个时候我就已经形成了对韩剧的一个严重偏见。在这里我要自我反省，但是自我看完《请回答1988》之后，我已经清楚的认识到以前的自己错的是有多离谱了，而且韩剧的影视在各个方面都是有着极高的制作水准的。</p><p>​        好了，简单交代一下看这部剧的原因以及自我检讨之后，下面将开始我看完这部剧的很多废话了。</p><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>《请回答1988》是一部讲述了从1988年开始，居住在韩国首尔双门洞的五个邻居家庭的成长故事的电视剧。该剧围绕着五个家庭中的几个小孩的成长，针对友情、亲情、爱情都给出了完美的诠释。</p><h3 id="主要人物"><a href="#主要人物" class="headerlink" title="主要人物"></a>主要人物</h3><ul><li><h4 id="德善家"><a href="#德善家" class="headerlink" title="德善家"></a>德善家</h4><ul><li>宝拉，是德善家的大姐，也是这个家的“地位最高者”，手握家中德善和弟弟的“生杀大权”，说一不二。也是这个胡同里孩子之中的“最高”</li><li>德善，这是一个多么好的女孩啊，好到令我心疼。她善良、大方、能为了保护弟弟而大打出手，能勇敢地向男生表达自己的爱意，也能</li></ul></li><li><h4 id="善宇家"><a href="#善宇家" class="headerlink" title="善宇家"></a>善宇家</h4></li><li><h4 id="崔泽家"><a href="#崔泽家" class="headerlink" title="崔泽家"></a>崔泽家</h4></li><li><h4 id="正焕家"><a href="#正焕家" class="headerlink" title="正焕家"></a>正焕家</h4></li><li><h4 id="东龙家（娃娃鱼家）"><a href="#东龙家（娃娃鱼家）" class="headerlink" title="东龙家（娃娃鱼家）"></a>东龙家（娃娃鱼家）</h4></li></ul><h3 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h3><h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><hr><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>演技很好</p><p>友情、亲情和爱情的完美融合</p><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>剧中出现的中国人都不是真的中国人，口音很明显。不过在找外国演员方面貌似很多影视作品都是敷衍了事，有人知道原因可以告诉我一下这是为什么。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>影视</category>
+      
+      <category>韩剧</category>
+      
+      <category>推荐</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>影评</tag>
+      
+      <tag>电视剧</tag>
+      
+      <tag>影视推荐</tag>
+      
+      <tag>韩剧</tag>
       
     </tags>
     

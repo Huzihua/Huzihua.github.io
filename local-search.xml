@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Mysql In 语句一些记录</title>
+    <link href="/blog/2023/04/01/Mysql-In-%E8%AF%AD%E5%8F%A5%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/"/>
+    <url>/blog/2023/04/01/Mysql-In-%E8%AF%AD%E5%8F%A5%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Mysql-In-语句"><a href="#Mysql-In-语句" class="headerlink" title="Mysql In 语句"></a>Mysql In 语句</h2><p>关于在上周在实际开发中使用Mysql In语句遇到的一些问题，记录一下。</p><p>为了更清楚地叙述，我在本地造了一些数据来简单演示一下。</p><p>这是库里的一些数据：</p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401101156.png" alt="image-20230401101156171" title="一些数据"></p><h3 id="1、In-语句自动去重"><a href="#1、In-语句自动去重" class="headerlink" title="1、In 语句自动去重"></a>1、In 语句自动去重</h3><p>我先根据 id in 进行一个简单的查询语句，看看效果：</p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401101326.png" alt="image-20230401101326092" title="in去重"></p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401101613.png" alt="image-20230401101613888" title="不去重"></p><p>如图所示，可以很清楚的看到mysql in 语句对于重复的值是会做自动去重处理的。对于in范围内重复的数据，默认选择第一个数据。</p><p>in语句是先查询子查询的表，然后将内表和外表做一个笛卡尔积，然后按照条件进行筛选，在查询子查询的表的时候就已经是去重的了。</p><h3 id="2、In-语句返回顺序"><a href="#2、In-语句返回顺序" class="headerlink" title="2、In 语句返回顺序"></a>2、In 语句返回顺序</h3><p>如图所示：</p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401103001.png" alt="image-20230401103001928" title="in顺序"></p><p>显然，mysql在执行in语句查询的时候，是会先将in范围里面的数据先进行默认排序再去执行的。想来应该是为了提高效率才默认这么做。</p><p>如果想按照in里面的顺序给你返回的话，可以这么写：</p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401103551.png" alt="image-20230401103551244" title="order by field"></p><p>通过<strong>explain</strong>可以看到，虽然使用这个可以按照你想要的顺序返回，但是额外使用了 <strong>filesort</strong>，对mysql性能也有所影响。具体该不该使用还得结合具体场景。</p><p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401103802.png" alt="image-20230401103802771" title="性能对比"></p><h3 id="3、完了"><a href="#3、完了" class="headerlink" title="3、完了"></a>3、完了</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>DataBase</category>
+      
+      <category>Mysql</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Mysql</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>SpringBoot引入Redis</title>
     <link href="/blog/2023/03/09/SpringBoot%E5%BC%95%E5%85%A5Redis/"/>
     <url>/blog/2023/03/09/SpringBoot%E5%BC%95%E5%85%A5Redis/</url>
@@ -17,9 +44,11 @@
       
       <category>SpringBoot</category>
       
+      <category>Cache</category>
+      
       <category>Redis</category>
       
-      <category>Cache</category>
+      <category>DataBase</category>
       
       <category>Redis</category>
       

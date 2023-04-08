@@ -1,0 +1,127 @@
+<mxfile host="Electron" modified="2023-04-08T16:19:41.422Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="FCT4NUGH_dDmZa_Brmst" version="21.1.2" type="device">
+  <diagram name="第 1 页" id="Mf-5RLiEeloFBE3M3Dh3">
+    <mxGraphModel dx="1100" dy="894" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.057;entryY=0.517;entryDx=0;entryDy=0;entryPerimeter=0;shape=link;" edge="1" parent="1" source="Q7KkJ6vCwHvC8iMYInm2-2" target="Q7KkJ6vCwHvC8iMYInm2-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-2" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="132.60000000000002" y="138" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-3" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="578.8" y="138" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-6" value="客户端&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="118.8" y="98" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-7" value="服务端" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="568.8" y="98" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.026;entryY=0.471;entryDx=0;entryDy=0;entryPerimeter=0;shape=link;" edge="1" parent="1" source="Q7KkJ6vCwHvC8iMYInm2-8" target="Q7KkJ6vCwHvC8iMYInm2-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-8" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/security/DVS_Surveillance_Monitor.svg;" vertex="1" parent="1">
+          <mxGeometry x="358.8" y="138" width="42" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-9" value="代理" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="334.8" y="98" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-47" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.057;entryY=0.517;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q7KkJ6vCwHvC8iMYInm2-48" target="Q7KkJ6vCwHvC8iMYInm2-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-48" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="132.60000000000002" y="359" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-49" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="584.8" y="473" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-50" value="客户端&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="118.8" y="319" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-51" value="服务端" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580.8" y="439" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.026;entryY=0.471;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q7KkJ6vCwHvC8iMYInm2-53" target="Q7KkJ6vCwHvC8iMYInm2-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-53" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/security/DVS_Surveillance_Monitor.svg;" vertex="1" parent="1">
+          <mxGeometry x="360.8" y="473" width="42" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-54" value="正向代理" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="349.8" y="432" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Q7KkJ6vCwHvC8iMYInm2-55" target="Q7KkJ6vCwHvC8iMYInm2-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-55" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="122.8" y="471.79999999999995" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Q7KkJ6vCwHvC8iMYInm2-56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="358.00001220703126" y="505.800048828125" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="275.8" y="612" />
+              <mxPoint x="275.8" y="503" />
+              <mxPoint x="354.8" y="503" />
+              <mxPoint x="354.8" y="506" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-56" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="122.8" y="581" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.057;entryY=0.517;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q7KkJ6vCwHvC8iMYInm2-60" target="Q7KkJ6vCwHvC8iMYInm2-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-60" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="112.80000000000001" y="896" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-61" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="577.8" y="806" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-62" value="客户端&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="104" y="854" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-63" value="服务端" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560.8" y="767" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.026;entryY=0.471;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q7KkJ6vCwHvC8iMYInm2-65" target="Q7KkJ6vCwHvC8iMYInm2-61">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="473.8" y="926" />
+              <mxPoint x="473.8" y="837" />
+              <mxPoint x="566.8" y="837" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Q7KkJ6vCwHvC8iMYInm2-65">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565.0000122070312" y="926" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.003;entryY=0.638;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Q7KkJ6vCwHvC8iMYInm2-65" target="Q7KkJ6vCwHvC8iMYInm2-67">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="473.8" y="926" />
+              <mxPoint x="473.8" y="1038" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-65" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/security/DVS_Surveillance_Monitor.svg;" vertex="1" parent="1">
+          <mxGeometry x="359.8" y="896" width="42" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-66" value="反向代理" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340.8" y="854" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-67" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="568.8" y="998" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="Q7KkJ6vCwHvC8iMYInm2-68" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="567.8" y="903" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

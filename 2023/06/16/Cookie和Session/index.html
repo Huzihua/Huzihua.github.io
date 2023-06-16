@@ -16,31 +16,28 @@
   <meta name="author" content="Polaris">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Mysql In 语句关于在上周在实际开发中使用Mysql In语句遇到的一些问题，记录一下。 为了更清楚地叙述，我在本地造了一些数据来简单演示一下。 这是库里的一些数据：  1、In 语句自动去重我先根据 id in 进行一个简单的查询语句，看看效果：   如图所示，可以很清楚的看到mysql in 语句对于重复的值是会做自动去重处理的。对于in范围内重复的数据，默认选择第一个数据。 in语句是">
+    <meta name="description" content="cookie和session这两个家伙，在我一开始接触到网络会话这一块的时候，时常让我傻傻分不清，只能笼统地知道它们都是维持网络中会话的机制，而且都很常见。为此，我决定在这里记录一下对这两个东西的自己的一些看法，以帮助我更好的区分它二者。 1、会话在介绍会话之前，我们先认识一下我们日常生活中见的非常多的Http。我们大多数日常网站使用的网络请求其实都是Http协议的请求，而Http协议是一个“无状">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql In 语句一些记录">
-<meta property="og:url" content="https://huzihua.github.io/blog/2023/04/01/Mysql-In-%E8%AF%AD%E5%8F%A5%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:title" content="Cookie和Session">
+<meta property="og:url" content="https://huzihua.github.io/blog/2023/06/16/Cookie%E5%92%8CSession/index.html">
 <meta property="og:site_name" content="Polaris&#39;s Blog">
-<meta property="og:description" content="Mysql In 语句关于在上周在实际开发中使用Mysql In语句遇到的一些问题，记录一下。 为了更清楚地叙述，我在本地造了一些数据来简单演示一下。 这是库里的一些数据：  1、In 语句自动去重我先根据 id in 进行一个简单的查询语句，看看效果：   如图所示，可以很清楚的看到mysql in 语句对于重复的值是会做自动去重处理的。对于in范围内重复的数据，默认选择第一个数据。 in语句是">
+<meta property="og:description" content="cookie和session这两个家伙，在我一开始接触到网络会话这一块的时候，时常让我傻傻分不清，只能笼统地知道它们都是维持网络中会话的机制，而且都很常见。为此，我决定在这里记录一下对这两个东西的自己的一些看法，以帮助我更好的区分它二者。 1、会话在介绍会话之前，我们先认识一下我们日常生活中见的非常多的Http。我们大多数日常网站使用的网络请求其实都是Http协议的请求，而Http协议是一个“无状">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401101156.png">
-<meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401101326.png">
-<meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401101613.png">
-<meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401103001.png">
-<meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401103551.png">
-<meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401103802.png">
-<meta property="article:published_time" content="2023-04-01T02:02:30.000Z">
-<meta property="article:modified_time" content="2023-04-01T02:51:28.222Z">
+<meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230616231203.png">
+<meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230616231418.png">
+<meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230616232315.png">
+<meta property="article:published_time" content="2023-06-16T14:46:25.000Z">
+<meta property="article:modified_time" content="2023-06-16T16:22:09.383Z">
 <meta property="article:author" content="Polaris">
-<meta property="article:tag" content="Mysql">
+<meta property="article:tag" content="网络、cookie、session">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401101156.png">
+<meta name="twitter:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230616231203.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Mysql In 语句一些记录 - Polaris&#39;s Blog</title>
+  <title>Cookie和Session - Polaris&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -206,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Mysql In 语句一些记录"></span>
+            <span id="subtitle" data-typed-text="Cookie和Session"></span>
           
         </div>
 
@@ -222,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-01 10:02" pubdate>
-          2023年4月1日 上午
+        <time datetime="2023-06-16 22:46" pubdate>
+          2023年6月16日 晚上
         </time>
       </span>
     
@@ -234,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          427 字
+          3.7k 字
         
       </span>
     
@@ -245,7 +242,7 @@
         
         
         
-          4 分钟
+          31 分钟
         
       </span>
     
@@ -291,12 +288,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Mysql In 语句一些记录</h1>
+            <h1 style="display: none">Cookie和Session</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：3 个月前
+                    本文最后更新于：几秒前
                   
                 
               </p>
@@ -304,23 +301,64 @@
             
               <div class="markdown-body">
                 
-                <h2 id="Mysql-In-语句"><a href="#Mysql-In-语句" class="headerlink" title="Mysql In 语句"></a>Mysql In 语句</h2><p>关于在上周在实际开发中使用Mysql In语句遇到的一些问题，记录一下。</p>
-<p>为了更清楚地叙述，我在本地造了一些数据来简单演示一下。</p>
-<p>这是库里的一些数据：</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401101156.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230401101156171" title="一些数据"></p>
-<h3 id="1、In-语句自动去重"><a href="#1、In-语句自动去重" class="headerlink" title="1、In 语句自动去重"></a>1、In 语句自动去重</h3><p>我先根据 id in 进行一个简单的查询语句，看看效果：</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401101326.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230401101326092" title="in去重"></p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401101613.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230401101613888" title="不去重"></p>
-<p>如图所示，可以很清楚的看到mysql in 语句对于重复的值是会做自动去重处理的。对于in范围内重复的数据，默认选择第一个数据。</p>
-<p>in语句是先查询子查询的表，然后将内表和外表做一个笛卡尔积，然后按照条件进行筛选，在查询子查询的表的时候就已经是去重的了。</p>
-<h3 id="2、In-语句返回顺序"><a href="#2、In-语句返回顺序" class="headerlink" title="2、In 语句返回顺序"></a>2、In 语句返回顺序</h3><p>如图所示：</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401103001.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230401103001928" title="in顺序"></p>
-<p>显然，mysql在执行in语句查询的时候，是会先将in范围里面的数据先进行默认排序再去执行的。想来应该是为了提高效率才默认这么做。</p>
-<p>如果想按照in里面的顺序给你返回的话，可以这么写：</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401103551.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230401103551244" title="order by field"></p>
-<p>通过<strong>explain</strong>可以看到，虽然使用这个可以按照你想要的顺序返回，但是额外使用了 <strong>filesort</strong>，对mysql性能也有所影响。具体该不该使用还得结合具体场景。</p>
-<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230401103802.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230401103802771" title="性能对比"></p>
-<h3 id="3、完了"><a href="#3、完了" class="headerlink" title="3、完了"></a>3、完了</h3>
+                <p>cookie和session这两个家伙，在我一开始接触到网络会话这一块的时候，时常让我傻傻分不清，只能笼统地知道它们都是维持网络中会话的机制，而且都很常见。为此，我决定在这里记录一下对这两个东西的自己的一些看法，以帮助我更好的区分它二者。</p>
+<h3 id="1、会话"><a href="#1、会话" class="headerlink" title="1、会话"></a>1、会话</h3><p>在介绍会话之前，我们先认识一下我们日常生活中见的非常多的<strong>Http</strong>。我们大多数日常网站使用的网络请求其实都是<strong>Http</strong>协议的请求，而<strong>Http</strong>协议是一个“无状态”的协议，这个词可能不太好理解，换种说法就是Http请求是一次性的，对于服务端来说当前的这次请求和上一次请求或者下一次请求本质上是没有关联性的，服务端是不认得，即便这几次请求都是同一个客户端发来的请求，服务端是无法辨认的。举个例子，现在是618，苹果打折了，你想买一个苹果14，然后你钱不太够，只能先给一半，过了两分钟后你再去找爸妈要到了剩下的一半的钱，这时候你再去付剩下的一半钱，如果说没有cookie或者session的帮助，那么“无状态”的<strong>Http</strong>协议是无法知道你之前到底有没有已经付了一半的，它根本不知道你之前有没有付过钱，这时候你麻烦就大了。</p>
+<p>那么，为什么我们日常使用中，体会不到<strong>Http</strong>协议“无状态”的这个特点呢，其实很简单，背后其实都是<strong>Cookie</strong>或者<strong>Session</strong>在起作用。简而言之，<strong>cookie</strong>和<strong>session</strong>就是帮助网络请求中的客户端和服务端之间建立一个持续时间长点儿的会话，使得在会话的这段时间内，服务端都能辨别出来这些请求原来都是你小子发过来的。</p>
+<h3 id="2、Cookie（抽象的会话方式）"><a href="#2、Cookie（抽象的会话方式）" class="headerlink" title="2、Cookie（抽象的会话方式）"></a>2、Cookie（抽象的会话方式）</h3><p>我们先来看看<strong>cookie</strong>吧，这个可能我们肉眼可见的比<strong>session</strong>要多很多。</p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230616231203.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230616231203680" title="随处可见的cookie"></p>
+<h4 id="2-1-cookie的存储"><a href="#2-1-cookie的存储" class="headerlink" title="2.1 cookie的存储"></a>2.1 cookie的存储</h4><p>各大网站随处可见这个小家伙，而且你只要打开你的浏览器设置，然后在“隐私和安全”你就会看到你当前浏览器上面的cookie信息了，很多网站其实都会默认帮你搞个<strong>cookie</strong>的。显而易见，cookie这个东西是存储在浏览器的，换个说法，<strong>cookie</strong>是存在网络请求中的客户端的，因为在网络请求中，浏览器是充当客户端的角色向服务端发送网络请求的，这是<strong>cookie</strong>的其中一个特点。</p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230616231418.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230616231418587" title="浏览器查看cookie"></p>
+<h4 id="2-2-cookie的生成"><a href="#2-2-cookie的生成" class="headerlink" title="2.2 cookie的生成"></a>2.2 cookie的生成</h4><p><strong>cookie</strong>其实是由服务端生成的，因为只有是服务端自己生成的<strong>cookie</strong>它才能通过同样的<strong>cookie</strong>来辨别这是同一个客户端的请求，也才能通过不同的<strong>cookie</strong>对应上不同的客户端，而不会乱套。</p>
+<p>那么<strong>cookie</strong>里面存的到底是什么呢？</p>
+<p>其实我们很容易就能知道，你只要打开浏览器，按下<strong>F12</strong>进入开发者模式后，随便打开个网站，看下它的请求，你都能看到<strong>cookie</strong>的身影，它里面存储的其实是服务端根据客户端请求里面的一些身份信息生成的一个标识。</p>
+<p><img src="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230616232315.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230616232315550" title="cookie内容"></p>
+<p>如上图所示，为什么我们能这么简单就看到cookie的内容呢？因为<strong>cookie</strong>是塞在了每一个网络请求的header里面随着网络请求到达服务端的，服务端接收到请求后就会取出<strong>header</strong>里面的cookie，并且解析，然后就能知道这个请求是哪个客户端发过来的了。</p>
+<p>可以看到，<strong>cookie</strong>中存储的<strong>key=value</strong>格式的字符串，那么这个字符串代表什么意思呢？这个字符串大概率就是代表了你在这个请求的服务端眼中的一个身份标识，而且通常来说会是一个唯一标识，一般来说这个字符串服务端稍作解密就能拿到客户端的身份信息了，如账号密码等等。</p>
+<h4 id="2-3-cookie的流程"><a href="#2-3-cookie的流程" class="headerlink" title="2.3 cookie的流程"></a>2.3 cookie的流程</h4><p>现在我们知道了<strong>cookie</strong>的生成、传输以及存储，那么就让我们总结一下cookie的整个运作流程吧。</p>
+<ul>
+<li>客户端第一次请求服务端，服务端这时候还不认识这个客户端，那么第一次的时候，服务端在响应请求的同时，同时会生成一个唯一的能标识这个客户端的一个<strong>cookie</strong>，并且将其塞到响应的header里面，一起返回到客户端。</li>
+<li>客户端收到响应后，一看header，哎，服务端懂事哈，给我还额外送了点礼物，把<strong>cookie</strong>也给我了。然后。客户端就会将这个<strong>cookie</strong>和它对应哪个服务端记录下来，存储到客户端中，这也就是上面的”浏览器查看<strong>cookie</strong>“这张图。</li>
+<li>接下来，客户端所有发送到这个服务端的请求都会自动将这个<strong>cookie</strong>塞进<strong>header</strong>里面，一起到达服务端，服务端会解析<strong>cookie</strong>来看看这次的请求又是哪个客户端给我的，然后对于不同的客户端可以作出不同的响应。</li>
+</ul>
+<p>当然，<strong>cookie</strong>也会过期，过期后就重复上面的操作其实就行了。</p>
+<h3 id="3、Session"><a href="#3、Session" class="headerlink" title="3、Session"></a>3、Session</h3><p>好了，说完<strong>cookie</strong>，现在来说一下<strong>session</strong>。首先要说明的是，<strong>cookie</strong>和<strong>session</strong>并不是两套并行的二者只存其一的这种关系，恰恰相反，大多数<strong>session</strong>机制其实都是依赖于<strong>cookie</strong>这一数据结构实现的。在<strong>session</strong>里面提到的<strong>cookie</strong>都是指<strong>http</strong>头里面的那个具体的数据机构而不是上文说的那个抽象的会话方式</p>
+<h4 id="3-1-为什么有了cookie还需要session呢"><a href="#3-1-为什么有了cookie还需要session呢" class="headerlink" title="3.1 为什么有了cookie还需要session呢"></a>3.1 为什么有了cookie还需要session呢</h4><p>在网络还没那么发达之前，<strong>cookie</strong>其实就已经能很好的解决会话问题了，但是随着网络打发展，安全性的提高，性能要求的提高等等原因，只能存储简单信息而且是明文的<strong>cookie</strong>在某些场景下已经不能满足需求了，于是人们想到了另外一种实现会话的机制，也就是<strong>session</strong>。</p>
+<h4 id="3-2-session的生成和存储"><a href="#3-2-session的生成和存储" class="headerlink" title="3.2 session的生成和存储"></a>3.2 session的生成和存储</h4><p><strong>session</strong>同样也是在服务端生成的，原因和cookie的一样，就不多赘述了。不同的是，服务端在生成<strong>sessionId</strong>（传输的那个id）的同时，还会把具体session的内容存储到某个地方，可以是数据库，也可以是内存等，总之就是存储在了服务端的某个地方。</p>
+<h4 id="3-3-session的传输"><a href="#3-3-session的传输" class="headerlink" title="3.3 session的传输"></a>3.3 session的传输</h4><p><strong>session</strong>的传输其实并不严格统一，严格意义来说，<strong>session</strong>只要能被请求带到服务端就行了。但是大多数的<strong>session</strong>其实是存在了<strong>http</strong>头里面的<strong>cookie</strong>这一个数据结构里面的，最常见的就是在<strong>cookie</strong>这一数据结构里面存储了<strong>sessionId=xxxx</strong>，然后随着请求到达服务端。</p>
+<h4 id="3-4-session的流程"><a href="#3-4-session的流程" class="headerlink" title="3.4 session的流程"></a>3.4 session的流程</h4><ul>
+<li>客户端第一次请求服务端，服务端这时候还不认识这个客户端，那么第一次的时候，服务端在响应请求的同时，同时会生成一个<strong>sessionId</strong>以及和这个id一一对应的这个客户端的一个身份信息，然后将<strong>sessionid</strong>塞到响应的<strong>header</strong>里面，一起返回到客户端，同时还会将真正的<strong>session</strong>内容存到服务端的某个地方。</li>
+<li>客户端收到响应后，一看<strong>header</strong>，服务端把cookie也给我了（此时<strong>cookie</strong>数据结构存储的其实是一个<strong>sessionId</strong>）。然后。客户端就会将这个<strong>cookie</strong>数据结构和它对应哪个服务端记录下来，存储到客户端中，这也就是上面的”浏览器查看cookie”这张图。</li>
+<li>接下来，客户端所有发送到这个服务端的请求都会自动将这个<strong>cookie</strong>数据结构塞进header里面，一起到达服务端，服务端会解析<strong>cookie</strong>数据结构拿出它里面存储着的<strong>sessionId</strong>，然后再通过这个id去存储<strong>session</strong>的地方查询对应的客户端信息，才能辨别出来这次的请求又是哪个客户端给我的，然后对于不同的客户端可以作出不同的响应。</li>
+</ul>
+<h3 id="4、相同"><a href="#4、相同" class="headerlink" title="4、相同"></a>4、相同</h3><ol>
+<li>都能实现会话的维持</li>
+<li>都是服务端生成的</li>
+<li>都是通过<strong>cookie</strong>这一具体的数据结构传输</li>
+</ol>
+<h3 id="5、不同"><a href="#5、不同" class="headerlink" title="5、不同"></a>5、不同</h3><ol>
+<li><strong>cookie</strong>存储在客户端，服务端不作存储</li>
+<li><strong>sessionid</strong>存储在客户端，但是真正的<strong>session</strong>内容存储在服务端</li>
+<li><strong>cookie</strong>一般承载的信息很少，因为毕竟是塞在<strong>http</strong>头里面的，不宜太大；而<strong>sessionId</strong>对应的具体<strong>session</strong>内容可以很大，可以承载很多信息，因为它是存储在服务端的，相对来说没什么大小限制</li>
+<li><strong>cookie</strong>是不太安全的，什么人都能直接抓包从<strong>header</strong>里面取到，然后稍微破解一下就能获取到敏感的客户端身份信息，如账号密码等；而<strong>sessionId</strong>只是一个唯一的字符串，本身并不存储实际的客户端身份信息，真正的客户端身份信息存储在了服务端，即便被抓包拿到了<strong>sessionId</strong>也没什么太大作用，所以<strong>session</strong>一般来说是比<strong>cookie</strong>更安全些的。</li>
+<li><strong>cookie</strong>对于资源消耗小，因为只在<strong>http</strong>头里面多传输了一个字符串就够了；而<strong>session</strong>在此基础上，还要在服务端专门开辟空间存储真正的客户端身份信息，对于资源的消耗无疑是比<strong>cookie</strong>更大的。</li>
+</ol>
+<h3 id="6、关系"><a href="#6、关系" class="headerlink" title="6、关系"></a>6、关系</h3><ul>
+<li><p><strong>cookie</strong>可以说是一个存储在<strong>http</strong>头里面的一个<strong>key-value</strong>格式的数据结构，也可以说是一种存储在客户端的比较轻量的维持会话的一种方式。</p>
+</li>
+<li><p><strong>session</strong>则是一种存储在服务端的维持会话的一种更为重量的机制。</p>
+</li>
+<li><p>在我看来，<strong>cookie</strong>和<strong>session</strong>不应该被放到一个同样的角度进行比较，这两者明明就是一个爸爸和儿子的关系。<strong>cookie</strong>是爸爸，<strong>session</strong>儿子，<strong>session</strong>要依靠<strong>cookie</strong>才能发挥出更大的作用，正如儿子要依靠父亲才能做出更大的成就一般。</p>
+</li>
+</ul>
+<h3 id="7、总结"><a href="#7、总结" class="headerlink" title="7、总结"></a>7、总结</h3><ul>
+<li><p><strong>cookie</strong>比较轻量，存储在客户端；</p>
+</li>
+<li><p><strong>session</strong>更为强大也更为重量，存储在服务端，而且一般<strong>session</strong>都要依赖于<strong>cookie</strong>这一数据结构。</p>
+</li>
+<li><p><strong>cookie</strong>在本文中有两种意义，一个是存储在<strong>Http</strong>请求头里面的那个具体的数据结构，另一个是抽象的和<strong>session</strong>并列的一种维持会话的机制。</p>
+</li>
+</ul>
+
                 
               </div>
             
@@ -338,15 +376,8 @@
     
       <span class="category-chain">
         
-  <a href="/blog/categories/DataBase/" class="category-chain-item">DataBase</a>
+  <a href="/blog/categories/%E7%BD%91%E7%BB%9C/" class="category-chain-item">网络</a>
   
-  
-    <span>></span>
-    
-  <a href="/blog/categories/DataBase/Mysql/" class="category-chain-item">Mysql</a>
-  
-  
-
   
 
       </span>
@@ -360,7 +391,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/Mysql/">#Mysql</a>
+        <a href="/blog/tags/%E7%BD%91%E7%BB%9C%E3%80%81cookie%E3%80%81session/">#网络、cookie、session</a>
       
     </div>
   
@@ -372,8 +403,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Mysql In 语句一些记录</div>
-      <div>https://huzihua.github.io/blog/2023/04/01/Mysql-In-语句一些记录/</div>
+      <div>Cookie和Session</div>
+      <div>https://huzihua.github.io/blog/2023/06/16/Cookie和Session/</div>
     </div>
     <div class="license-meta">
       
@@ -385,7 +416,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年4月1日</div>
+          <div>2023年6月16日</div>
         </div>
       
       
@@ -417,18 +448,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2023/04/08/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" title="正向代理&amp;反向代理">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">正向代理&amp;反向代理</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/03/09/SpringBoot%E5%BC%95%E5%85%A5Redis/" title="SpringBoot引入Redis">
-                        <span class="hidden-mobile">SpringBoot引入Redis</span>
+                      <a href="/blog/2023/04/08/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" title="正向代理&amp;反向代理">
+                        <span class="hidden-mobile">正向代理&amp;反向代理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -451,7 +476,7 @@
         var options = Object.assign(
           {"clientID":"d3d78ed95becc914d37b","clientSecret":"30043bd3f5576e66ee2c0176fe3d0a6ae9569f85","repo":"MyBlogComment","owner":"Huzihua","admin":["Huzihua"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '5d4dd38601b9550feb856a6d7935b7f7'
+            id: '5c4d5a4d639004027bce139e443b282a'
           }
         )
         var gitalk = new Gitalk(options);

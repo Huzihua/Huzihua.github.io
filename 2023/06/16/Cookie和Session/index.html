@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230616231418.png">
 <meta property="og:image" content="https://typora-hzh.oss-cn-hangzhou.aliyuncs.com/PrivateBlogPic/20230616232315.png">
 <meta property="article:published_time" content="2023-06-16T14:46:25.000Z">
-<meta property="article:modified_time" content="2023-06-16T16:22:09.383Z">
+<meta property="article:modified_time" content="2023-06-16T16:32:26.646Z">
 <meta property="article:author" content="Polaris">
 <meta property="article:tag" content="网络、cookie、session">
 <meta name="twitter:card" content="summary_large_image">
@@ -347,7 +347,7 @@
 </li>
 <li><p><strong>session</strong>则是一种存储在服务端的维持会话的一种更为重量的机制。</p>
 </li>
-<li><p>在我看来，<strong>cookie</strong>和<strong>session</strong>不应该被放到一个同样的角度进行比较，这两者明明就是一个爸爸和儿子的关系。<strong>cookie</strong>是爸爸，<strong>session</strong>儿子，<strong>session</strong>要依靠<strong>cookie</strong>才能发挥出更大的作用，正如儿子要依靠父亲才能做出更大的成就一般。</p>
+<li><p>在我看来，<strong>cookie</strong>只有被当作是一种抽象的实现会话的机制的时候才能和<strong>session</strong>被放到一个同样的角度进行比较。当它是一个数据结构的身份的时候，它就是实现<strong>session</strong>的载体之一，<strong>session</strong>要依赖它来传输<strong>sessionId</strong>。</p>
 </li>
 </ul>
 <h3 id="7、总结"><a href="#7、总结" class="headerlink" title="7、总结"></a>7、总结</h3><ul>
